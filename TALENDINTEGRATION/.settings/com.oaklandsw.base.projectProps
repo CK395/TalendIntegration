@@ -6,4 +6,5 @@ Reports,com.oaklandsw.base,order,7
 Sample Data,com.oaklandsw.base,order,6
 Structures,com.oaklandsw.base,order,0
 Structures/67621692_output.xml,com.oaklandsw.base,references.0,Namespace Containers/67621692_output.xml
+Structures/67621692_output.xml,com.oaklandsw.base,references.1,Sample Data/67621692_output/67621692_output
 Structures/MultipleDiscountDetail_ProductLineItem.xml,com.oaklandsw.base,references.0,Namespace Containers/MultipleDiscountDetail_ProductLineItem.xml
