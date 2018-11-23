@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/MultipleDiscountDetail_ProductLineItem.xml' outStruct='Structures/67621692_output.xml' inputRep='172' outputRep='172' nextMap='' inputStructUserName='MultipleDiscountDetail_ProductLineItem' outputStructUserName='67621692_output' V1='4' name='XML_Mapping' incarnation='2473'>
-  <inputMapElem t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='11' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='orders'>
+<root t='190' id='1' V190='11' inStruct='Structures/MultipleDiscountDetail_ProductLineItem.xml' outStruct='Structures/67621692_output.xml' inputRep='172' outputRep='172' nextMap='' inputStructUserName='MultipleDiscountDetail_ProductLineItem' outputStructUserName='67621692_output' V1='4' name='XML_Mapping' incarnation='2546'>
+  <inputMapElem t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='12' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='orders'>
     <mapNode t='190' idref='1'/>
-    <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='7' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='order'>
+    <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='8' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='order'>
       <mapNode t='190' idref='1'/>
       <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='Attributes'>
         <mapNode t='190' idref='1'/>
@@ -58,13 +58,13 @@
       <child t='200' id='23' V200='8' input='true' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='remoteHost'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='24' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='custom-attributes'>
+      <child t='200' id='24' V200='8' input='true' structElemExists='true' usedCount='4' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='custom-attributes'>
         <mapNode t='190' idref='1'/>
-        <child t='200' id='25' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='-1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='custom-attribute'>
+        <child t='200' id='25' V200='8' input='true' structElemExists='true' usedCount='4' V283='2' occurMinTimes='1' occurMaxTimes='-1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='custom-attribute'>
           <mapNode t='190' idref='1'/>
-          <child t='200' id='26' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='Attributes'>
+          <child t='200' id='26' V200='8' input='true' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' namespaceIndex='1' V281='13' V1='4' name='Attributes'>
             <mapNode t='190' idref='1'/>
-            <child t='200' id='27' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='attribute-id'>
+            <child t='200' id='27' V200='8' input='true' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' elemType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='attribute-id'>
               <mapNode t='190' idref='1'/>
             </child>
           </child>
@@ -112,7 +112,7 @@
         </child>
         <child t='200' id='39' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='ExternalOrderNumber'>
           <mapNode t='190' idref='1'/>
-          <value>SimpleLoop([autoAdded="true"],in$/orders,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/orders/order/custom-attributes/custom-attribute,{Filter},{Sort Keys},{Contexts})))</value>
+          <value>SimpleLoop([autoAdded="true"],in$/orders,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/orders/order/custom-attributes/custom-attribute,Equal(in$/orders/order/custom-attributes/custom-attribute/Attributes/attribute-id,Constant([value="posExternalOrderNumber",dataType="2"],)),{Sort Keys},{Contexts})))</value>
         </child>
         <child t='200' id='40' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='OrderSubtotal'>
           <mapNode t='190' idref='1'/>
