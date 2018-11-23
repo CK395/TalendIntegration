@@ -180,6 +180,10 @@
     <module>jobs/process/t01_Compo/System_/tsetenv_0.1</module>
     <module>jobs/process/priortest_0.1</module>
     <module>jobs/process/t04_Context/built_incontext_1_0.1</module>
+    <module>jobs/process/Examples/getweather_0.1</module>
+    <module>jobs/process/Examples/sayhello_0.1</module>
+    <module>jobs/joblets/jcloudlog_0.1</module>
+    <module>jobs/process/Examples/video_viewers_watch_results_log_filter_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TALENDINTEGRATION</talend.project.name>
