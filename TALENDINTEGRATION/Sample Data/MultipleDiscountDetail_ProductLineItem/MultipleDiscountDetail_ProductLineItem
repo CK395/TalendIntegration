@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders xmlns="http://www.demandware.com/xml/impex/order/2006-10-31">
+<order order-no="67621692">
+        <order-date>2018-08-06T20:08:20.226Z</order-date>
+        <created-by>storefront</created-by>
+        <original-order-no>67621692</original-order-no>
+        <currency>USD</currency>
+        <customer-locale>default</customer-locale>
+        <taxation>net</taxation>
+        <invoice-no>06170840</invoice-no>
+        <customer>
+            <customer-no>43550677</customer-no>
+            <customer-name>Linda Ingram</customer-name>
+            <customer-email>lingram@jacksoncountygov.com</customer-email>
+            <billing-address>
+                <first-name>Linda</first-name>
+                <last-name>Ingram</last-name>
+                <address1>145 Hickory Hollow Pl</address1>
+                <city>Jefferson</city>
+                <postal-code>30549-6646</postal-code>
+                <state-code>GA</state-code>
+                <country-code>US</country-code>
+                <phone>770-287-2393</phone>
+                <custom-attributes>
+                    <custom-attribute attribute-id="addressid">home</custom-attribute>
+                    <custom-attribute attribute-id="email">lingram@jacksoncountygov.com</custom-attribute>
+                </custom-attributes>
+            </billing-address>
+        </customer>
+        <status>
+            <order-status>NEW</order-status>
+            <shipping-status>NOT_SHIPPED</shipping-status>
+            <confirmation-status>CONFIRMED</confirmation-status>
+            <payment-status>NOT_PAID</payment-status>
+        </status>
+        <current-order-no>67621692</current-order-no>
+        <product-lineitems>
+            <product-lineitem>
+                <net-price>3.99</net-price>
+                <tax>0.19</tax>
+                <gross-price>4.18</gross-price>
+                <base-price>3.99</base-price>
+                <lineitem-text>Space Dye Leggings</lineitem-text>
+                <tax-basis>3.99</tax-basis>
+                <position>1</position>
+                <product-id>0438592580349</product-id>
+                <product-name>Space Dye Leggings</product-name>
+                <quantity unit="">1.0</quantity>
+                <tax-rate>0.0825</tax-rate>
+                <shipment-id>06214928</shipment-id>
+                <gift>false</gift>
+                <custom-attributes>
+                    <custom-attribute attribute-id="ExtendedPurchasePrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="PDPlink">https://www.belk.com/p/new-directions-space-dye-leggings/0438592580349.html</custom-attribute>
+                    <custom-attribute attribute-id="PurchasePrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="UPC">0606348526686</custom-attribute>
+                    <custom-attribute attribute-id="brand">New Directions&#174;</custom-attribute>
+                    <custom-attribute attribute-id="classNumber">6270</custom-attribute>
+                    <custom-attribute attribute-id="extendedPrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAdjAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="isClearance">true</custom-attribute>
+                    <custom-attribute attribute-id="itemSalesType">2</custom-attribute>
+                    <custom-attribute attribute-id="lineTotalAmt">2.85</custom-attribute>
+                    <custom-attribute attribute-id="mirVendorNumber">1804068</custom-attribute>
+                    <custom-attribute attribute-id="originalPrice">29.0</custom-attribute>
+                    <custom-attribute attribute-id="parentProductCode">1804068MPV14761P</custom-attribute>
+                    <custom-attribute attribute-id="primaryImageURL">https://belk.scene7.com/is/image/Belk?layer=0&amp;src=1804068_MPV14761P_A_001_T10L00&amp;layer=comp&amp;</custom-attribute>
+                    <custom-attribute attribute-id="productCopyText">Styled with stretchy spandex for impeccable flexibility, these sleek and chic leggings are ideal for dressing up or down, depending on the occasion. The versatile profile and elegant space dye pattern combine to create an easy favorite in this essential pair.</custom-attribute>
+                    <custom-attribute attribute-id="shippingAdjAmt">1.27</custom-attribute>
+                    <custom-attribute attribute-id="shippingAmt">1.27</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="shippingTotalTaxAmt">30.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyAmt">0.09</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="taxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxStateAmt">0.1</custom-attribute>
+                    <custom-attribute attribute-id="taxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="unitPrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="vendorColorDescription">Black</custom-attribute>
+                    <custom-attribute attribute-id="vendorNumber">10005890</custom-attribute>
+                    <custom-attribute attribute-id="vendorSizeDescription">12-14</custom-attribute>
+                </custom-attributes>
+                <price-adjustments>
+                    <price-adjustment>
+                        <net-price>0.00</net-price>
+                        <base-price>0.00</base-price>
+                        <promotion-id>BRD-182000760513281</promotion-id>
+                        <custom-attributes>
+                            <custom-attribute attribute-id="belkRewardDollarID">182000760513281</custom-attribute>
+                            <custom-attribute attribute-id="dealMKDInd">2</custom-attribute>
+                            <custom-attribute attribute-id="discountAmt">1.33</custom-attribute>
+                            <custom-attribute attribute-id="discountPercentage">33.0</custom-attribute>
+                            <custom-attribute attribute-id="discountType">9</custom-attribute>
+                        </custom-attributes>
+                    </price-adjustment>
+                </price-adjustments>
+            </product-lineitem>
+            <product-lineitem>
+                <net-price>3.99</net-price>
+                <tax>0.19</tax>
+                <gross-price>4.18</gross-price>
+                <base-price>3.99</base-price>
+                <lineitem-text>Space Dye Leggings</lineitem-text>
+                <tax-basis>3.99</tax-basis>
+                <position>2</position>
+                <product-id>0438592580448</product-id>
+                <product-name>Space Dye Leggings</product-name>
+                <quantity unit="">1.0</quantity>
+                <tax-rate>0.0825</tax-rate>
+                <shipment-id>06214928</shipment-id>
+                <gift>false</gift>
+                <custom-attributes>
+                    <custom-attribute attribute-id="ExtendedPurchasePrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="PDPlink">https://www.belk.com/p/new-directions-space-dye-leggings/0438592580448.html</custom-attribute>
+                    <custom-attribute attribute-id="PurchasePrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="UPC">0606348526709</custom-attribute>
+                    <custom-attribute attribute-id="brand">New Directions&#174;</custom-attribute>
+                    <custom-attribute attribute-id="classNumber">6270</custom-attribute>
+                    <custom-attribute attribute-id="extendedPrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAdjAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="isClearance">true</custom-attribute>
+                    <custom-attribute attribute-id="itemSalesType">2</custom-attribute>
+                    <custom-attribute attribute-id="lineTotalAmt">2.85</custom-attribute>
+                    <custom-attribute attribute-id="mirVendorNumber">1804068</custom-attribute>
+                    <custom-attribute attribute-id="originalPrice">29.0</custom-attribute>
+                    <custom-attribute attribute-id="parentProductCode">1804068MPV14761P</custom-attribute>
+                    <custom-attribute attribute-id="primaryImageURL">https://belk.scene7.com/is/image/Belk?layer=0&amp;src=1804068_MPV14761P_A_235_T10L00&amp;layer=comp&amp;</custom-attribute>
+                    <custom-attribute attribute-id="productCopyText">Styled with stretchy spandex for impeccable flexibility, these sleek and chic leggings are ideal for dressing up or down, depending on the occasion. The versatile profile and elegant space dye pattern combine to create an easy favorite in this essential pair.</custom-attribute>
+                    <custom-attribute attribute-id="shippingAdjAmt">1.27</custom-attribute>
+                    <custom-attribute attribute-id="shippingAmt">1.27</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="shippingTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyAmt">0.09</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="taxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxStateAmt">0.1</custom-attribute>
+                    <custom-attribute attribute-id="taxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="unitPrice">3.99</custom-attribute>
+                    <custom-attribute attribute-id="vendorColorDescription">Latte</custom-attribute>
+                    <custom-attribute attribute-id="vendorNumber">10005890</custom-attribute>
+                    <custom-attribute attribute-id="vendorSizeDescription">12-14</custom-attribute>
+                </custom-attributes>
+                <price-adjustments>
+                    <price-adjustment>
+                        <net-price>0.00</net-price>
+                        <base-price>0.00</base-price>
+                        <promotion-id>BRD-182000760513281</promotion-id>
+                        <custom-attributes>
+                            <custom-attribute attribute-id="belkRewardDollarID">182000760513281</custom-attribute>
+                            <custom-attribute attribute-id="dealMKDInd">2</custom-attribute>
+                            <custom-attribute attribute-id="discountAmt">1.33</custom-attribute>
+                            <custom-attribute attribute-id="discountPercentage">33.0</custom-attribute>
+                            <custom-attribute attribute-id="discountType">9</custom-attribute>
+                        </custom-attributes>
+                    </price-adjustment>
+                </price-adjustments>
+            </product-lineitem>
+            <product-lineitem>
+                <net-price>11.99</net-price>
+                <tax>0.56</tax>
+                <gross-price>12.55</gross-price>
+                <base-price>11.99</base-price>
+                <lineitem-text>Mandie Short Perfect Fit Jeans</lineitem-text>
+                <tax-basis>11.99</tax-basis>
+                <position>3</position>
+                <product-id>0438621760087</product-id>
+                <product-name>Mandie Short Perfect Fit Jeans</product-name>
+                <quantity unit="">1.0</quantity>
+                <tax-rate>0.0825</tax-rate>
+                <shipment-id>06214928</shipment-id>
+                <gift>false</gift>
+                <custom-attributes>
+                    <custom-attribute attribute-id="ExtendedPurchasePrice">11.99</custom-attribute>
+                    <custom-attribute attribute-id="PDPlink">https://www.belk.com/p/bandolino-mandie-short-perfect-fit-jeans/0438621760087.html</custom-attribute>
+                    <custom-attribute attribute-id="PurchasePrice">11.99</custom-attribute>
+                    <custom-attribute attribute-id="UPC">0008864541424</custom-attribute>
+                    <custom-attribute attribute-id="brand">Bandolino</custom-attribute>
+                    <custom-attribute attribute-id="classNumber">1910</custom-attribute>
+                    <custom-attribute attribute-id="extendedPrice">11.99</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAdjAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="isClearance">true</custom-attribute>
+                    <custom-attribute attribute-id="itemSalesType">2</custom-attribute>
+                    <custom-attribute attribute-id="lineTotalAmt">8.55</custom-attribute>
+                    <custom-attribute attribute-id="mirVendorNumber">1800326</custom-attribute>
+                    <custom-attribute attribute-id="originalPrice">49.0</custom-attribute>
+                    <custom-attribute attribute-id="parentProductCode">180032660497969</custom-attribute>
+                    <custom-attribute attribute-id="primaryImageURL">https://belk.scene7.com/is/image/Belk?layer=0&amp;src=1800326_60497969_A_401_T10L00&amp;layer=comp&amp;</custom-attribute>
+                    <custom-attribute attribute-id="productCopyText">This Mandie short perfect fit jean is crafted with a straight leg and regular fit silhouette that will elongate your legs and hug your curves in all the right places.</custom-attribute>
+                    <custom-attribute attribute-id="shippingAdjAmt">3.8</custom-attribute>
+                    <custom-attribute attribute-id="shippingAmt">3.8</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="shippingTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyAmt">0.24</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="taxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxStateAmt">0.32</custom-attribute>
+                    <custom-attribute attribute-id="taxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="unitPrice">11.99</custom-attribute>
+                    <custom-attribute attribute-id="vendorColorDescription">Sonora W.no Acid Was</custom-attribute>
+                    <custom-attribute attribute-id="vendorNumber">1800326</custom-attribute>
+                    <custom-attribute attribute-id="vendorSizeDescription">12 Short</custom-attribute>
+                </custom-attributes>
+                <price-adjustments>
+                    <price-adjustment>
+                        <net-price>0.00</net-price>
+                        <base-price>0.00</base-price>
+                        <promotion-id>BRD-182000760513281</promotion-id>
+                        <custom-attributes>
+                            <custom-attribute attribute-id="belkRewardDollarID">182000760513281</custom-attribute>
+                            <custom-attribute attribute-id="dealMKDInd">2</custom-attribute>
+                            <custom-attribute attribute-id="discountAmt">4.0</custom-attribute>
+                            <custom-attribute attribute-id="discountPercentage">33.0</custom-attribute>
+                            <custom-attribute attribute-id="discountType">9</custom-attribute>
+                        </custom-attributes>
+                    </price-adjustment>
+                </price-adjustments>
+            </product-lineitem>
+            <product-lineitem>
+                <net-price>9.99</net-price>
+                <tax>0.47</tax>
+                <gross-price>10.46</gross-price>
+                <base-price>9.99</base-price>
+                <lineitem-text>Petite Size Milano Slim Leg Pants</lineitem-text>
+                <tax-basis>9.99</tax-basis>
+                <position>4</position>
+                <product-id>0438596597268</product-id>
+                <product-name>Petite Size Milano Slim Leg Pants</product-name>
+                <quantity unit="">1.0</quantity>
+                <tax-rate>0.0825</tax-rate>
+                <shipment-id>06214928</shipment-id>
+                <gift>false</gift>
+                <custom-attributes>
+                    <custom-attribute attribute-id="ExtendedPurchasePrice">9.99</custom-attribute>
+                    <custom-attribute attribute-id="PDPlink">https://www.belk.com/p/kim-rogers-petite-size-milano-slim-leg-pants/0438596597268.html</custom-attribute>
+                    <custom-attribute attribute-id="PurchasePrice">9.99</custom-attribute>
+                    <custom-attribute attribute-id="UPC">0087296386988</custom-attribute>
+                    <custom-attribute attribute-id="brand">Kim Rogers&#174;</custom-attribute>
+                    <custom-attribute attribute-id="classNumber">1750</custom-attribute>
+                    <custom-attribute attribute-id="extendedPrice">9.99</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="giftboxTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAdjAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="handlingTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="isClearance">true</custom-attribute>
+                    <custom-attribute attribute-id="itemSalesType">2</custom-attribute>
+                    <custom-attribute attribute-id="lineTotalAmt">7.12</custom-attribute>
+                    <custom-attribute attribute-id="mirVendorNumber">1801239</custom-attribute>
+                    <custom-attribute attribute-id="originalPrice">48.0</custom-attribute>
+                    <custom-attribute attribute-id="parentProductCode">1801239J6T03D127</custom-attribute>
+                    <custom-attribute attribute-id="primaryImageURL">https://belk.scene7.com/is/image/Belk?layer=0&amp;src=1801239_J6T03D127_A_001_T10L00&amp;layer=comp&amp;</custom-attribute>
+                    <custom-attribute attribute-id="productCopyText">A slimming fit and spandex-stretchy design will keep these pants in your collection for seasons to come.</custom-attribute>
+                    <custom-attribute attribute-id="shippingAdjAmt">3.16</custom-attribute>
+                    <custom-attribute attribute-id="shippingAmt">3.16</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="shippingTaxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="shippingTotalTaxAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCityAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyAmt">0.21</custom-attribute>
+                    <custom-attribute attribute-id="taxCountyName">JACKSON</custom-attribute>
+                    <custom-attribute attribute-id="taxDistrictAmt">0.0</custom-attribute>
+                    <custom-attribute attribute-id="taxStateAmt">0.26</custom-attribute>
+                    <custom-attribute attribute-id="taxStateName">GEORGIA</custom-attribute>
+                    <custom-attribute attribute-id="unitPrice">9.99</custom-attribute>
+                    <custom-attribute attribute-id="vendorColorDescription">Black</custom-attribute>
+                    <custom-attribute attribute-id="vendorNumber">1801239</custom-attribute>
+                    <custom-attribute attribute-id="vendorSizeDescription">12 Petite</custom-attribute>
+                </custom-attributes>
+                <price-adjustments>
+                    <price-adjustment>
+                        <net-price>0.00</net-price>
+                        <base-price>0.00</base-price>
+                        <promotion-id>BRD-182000760513281</promotion-id>
+                        <custom-attributes>
+                            <custom-attribute attribute-id="belkRewardDollarID">182000760513281</custom-attribute>
+                            <custom-attribute attribute-id="dealMKDInd">2</custom-attribute>
+                            <custom-attribute attribute-id="discountAmt">3.34</custom-attribute>
+                            <custom-attribute attribute-id="discountPercentage">33.0</custom-attribute>
+                            <custom-attribute attribute-id="discountType">9</custom-attribute>
+                        </custom-attributes>
+                    </price-adjustment>
+                </price-adjustments>
+            </product-lineitem>
+        </product-lineitems>
+        <shipping-lineitems>
+            <shipping-lineitem>
+                <net-price>9.50</net-price>
+                <tax>0.00</tax>
+                <gross-price>9.50</gross-price>
+                <base-price>9.50</base-price>
+                <lineitem-text>Shipping</lineitem-text>
+                <tax-basis>0.00</tax-basis>
+                <price-adjustments>
+                    <price-adjustment>
+                        <net-price>-9.50</net-price>
+                        <tax>0.00</tax>
+                        <gross-price>-9.50</gross-price>
+                        <base-price>-9.50</base-price>
+                        <lineitem-text>Belk Elites Receive Free Standard Shipping</lineitem-text>
+                        <tax-basis>0.00</tax-basis>
+                        <promotion-id>BelkEliteFreeShipping</promotion-id>
+                        <campaign-id>free-elite-shipping</campaign-id>
+                        <discount>
+                            <free/>
+                        </discount>
+                    </price-adjustment>
+                </price-adjustments>
+                <item-id>STANDARD_SHIPPING</item-id>
+                <shipment-id>06214928</shipment-id>
+                <tax-rate>0.0825</tax-rate>
+            </shipping-lineitem>
+        </shipping-lineitems>
+        <shipments>
+            <shipment shipment-id="06214928">
+                <status>
+                    <shipping-status>NOT_SHIPPED</shipping-status>
+                </status>
+                <shipping-method>Ground</shipping-method>
+                <shipping-address>
+                    <first-name>Linda</first-name>
+                    <last-name>Ingram</last-name>
+                    <address1>145 Hickory Hollow Pl</address1>
+                    <city>Jefferson</city>
+                    <postal-code>30549-6646</postal-code>
+                    <state-code>GA</state-code>
+                    <country-code>US</country-code>
+                    <phone>770-287-2393</phone>
+                    <custom-attributes>
+                        <custom-attribute attribute-id="addressValidationChoice">accepted</custom-attribute>
+                        <custom-attribute attribute-id="addressid">home</custom-attribute>
+                        <custom-attribute attribute-id="isPOBox">false</custom-attribute>
+                        <custom-attribute attribute-id="isValidated">true</custom-attribute>
+                    </custom-attributes>
+                </shipping-address>
+                <gift>false</gift>
+                <totals>
+                    <merchandize-total>
+                        <net-price>29.96</net-price>
+                        <tax>1.41</tax>
+                        <gross-price>31.37</gross-price>
+                    </merchandize-total>
+                    <adjusted-merchandize-total>
+                        <net-price>29.96</net-price>
+                    </adjusted-merchandize-total>
+                    <shipping-total>
+                        <net-price>9.50</net-price>
+                        <tax>0.00</tax>
+                        <gross-price>9.50</gross-price>
+                    </shipping-total>
+                    <adjusted-shipping-total>
+                        <net-price>0.00</net-price>
+                        <tax>0.00</tax>
+                        <gross-price>0.00</gross-price>
+                    </adjusted-shipping-total>
+                    <shipment-total>
+                        <net-price>29.96</net-price>
+                        <tax>1.41</tax>
+                        <gross-price>31.37</gross-price>
+                    </shipment-total>
+                </totals>
+                <custom-attributes>
+                    <custom-attribute attribute-id="High_Value_Status">false</custom-attribute>
+                    <custom-attribute attribute-id="addressValidationChoice">accepted</custom-attribute>
+                    <custom-attribute attribute-id="shipmentSort">Chome</custom-attribute>
+                </custom-attributes>
+            </shipment>
+        </shipments>
+        <totals>
+            <merchandize-total>
+                <net-price>29.96</net-price>
+                <tax>1.41</tax>
+                <gross-price>31.37</gross-price>
+                <price-adjustments>
+                    <price-adjustment>
+                        <net-price>-10.00</net-price>
+                        <tax>0.00</tax>
+                        <gross-price>-10.00</gross-price>
+                        <base-price>-10.00</base-price>
+                        <lineitem-text>BRD Discount Price Adjustment</lineitem-text>
+                        <promotion-id>BRD-182000760513281</promotion-id>
+                        <discount>
+                            <amount>10.00</amount>
+                        </discount>
+                        <custom-attributes>
+                            <custom-attribute attribute-id="BRDHold">true</custom-attribute>
+                        </custom-attributes>
+                    </price-adjustment>
+                </price-adjustments>
+            </merchandize-total>
+            <adjusted-merchandize-total>
+                <net-price>19.96</net-price>
+            </adjusted-merchandize-total>
+            <shipping-total>
+                <net-price>9.50</net-price>
+                <tax>0.00</tax>
+                <gross-price>9.50</gross-price>
+            </shipping-total>
+            <adjusted-shipping-total>
+                <net-price>0.00</net-price>
+                <tax>0.00</tax>
+                <gross-price>0.00</gross-price>
+            </adjusted-shipping-total>
+            <order-total>
+                <net-price>19.96</net-price>
+                <tax>1.41</tax>
+                <gross-price>21.37</gross-price>
+            </order-total>
+        </totals>
+        <payments>
+            <payment>
+				<custom-method>
+                    <method-name>ACI_GIFTCARD</method-name>
+                    <custom-attributes>
+                        <custom-attribute attribute-id="ACIBuildNumber">e7a0be7d2001c256dba942c51da40ff290899d79@2018-08-02 06:11:07 +0000</custom-attribute>
+                        <custom-attribute attribute-id="ACIToken">8ac9a4a264f44dfe016510da839601a2</custom-attribute>
+                        <custom-attribute attribute-id="authorizationTimestamp">2018-08-06 20:08:01+0000</custom-attribute>
+                        <custom-attribute attribute-id="chargeSequence">1</custom-attribute>
+                        <custom-attribute attribute-id="giftCardNumber">6064540000186338577</custom-attribute>
+                        <custom-attribute attribute-id="ndc">8a8394c15aaff3fb015ab8a09cab300b_6e5782f20b7d47959ff988f83896c85e</custom-attribute>
+                    </custom-attributes>
+                </custom-method>
+                <credit-card>
+                    <card-type>BELK_PRIVATE_LABEL</card-type>
+                    <card-number>XXXX-XXXX-XXXX-8425</card-number>
+                    <card-holder>Linda P Ingram</card-holder>
+                    <card-token>5243000137358425</card-token>
+                    <expiration-month>10</expiration-month>
+                    <expiration-year>2020</expiration-year>
+                    <custom-attributes>
+                        <custom-attribute attribute-id="ACIToken">5243000137358425</custom-attribute>
+                        <custom-attribute attribute-id="chargeSequence">1</custom-attribute>
+                    </custom-attributes>
+                </credit-card>
+                <amount>21.37</amount>
+                <processor-id>ACI_BASIC_CREDIT</processor-id>
+                <transaction-id>67621692</transaction-id>
+                <custom-attributes>
+                    <custom-attribute attribute-id="ACIBuildNumber">e7a0be7d2001c256dba942c51da40ff290899d79@2018-08-02 06:11:07 +0000</custom-attribute>
+                    <custom-attribute attribute-id="authCode">501081</custom-attribute>
+                    <custom-attribute attribute-id="authorizationExpiredTimestamp">2018-11-13 20:08:20+0000</custom-attribute>
+                    <custom-attribute attribute-id="authorizationTimestamp">2018-08-06 20:08:20+0000</custom-attribute>
+                    <custom-attribute attribute-id="belkPlanType">01</custom-attribute>
+                    <custom-attribute attribute-id="chargeSequence">1</custom-attribute>
+                    <custom-attribute attribute-id="journalId">D888218842597988</custom-attribute>
+                    <custom-attribute attribute-id="ndc">8a8394c15aaff3fb015ab8a09cab300b_85902787b13e4ba88c8ffcb457696af4</custom-attribute>
+                    <custom-attribute attribute-id="payID">8ac9a49f64f424be016510dacb1d4652</custom-attribute>
+                    <custom-attribute attribute-id="resultCode">00</custom-attribute>
+                    <custom-attribute attribute-id="resultDescription">Approved</custom-attribute>
+                    <custom-attribute attribute-id="retrievalReferenceNumber">15033182726</custom-attribute>
+                </custom-attributes>
+            </payment>
+        </payments>
+        <remoteHost>50.207.103.1</remoteHost>
+        <custom-attributes>
+            <custom-attribute attribute-id="customerType">ELITE</custom-attribute>
+            <custom-attribute attribute-id="enteredLocation">0888</custom-attribute>
+            <custom-attribute attribute-id="fraudStatus">ACCEPT</custom-attribute>
+            <custom-attribute attribute-id="guestCustomer">false</custom-attribute>
+            <custom-attribute attribute-id="onesourceTaxSource">true</custom-attribute>
+            <custom-attribute attribute-id="orderSource">ECDW</custom-attribute>
+            <custom-attribute attribute-id="orderType">STH</custom-attribute>
+            <custom-attribute attribute-id="paymentDetailsTotal">MerchandiseAmount;29.96;CouponDiscount;0.00;AssociateDiscount;0.00;ShippingSurcharges;0.00;RewardDollars;10.00;ShippingAmount;0.00;TaxesAmount;1.41;OrderAmount;21.37;GiftBoxAmt;0.00;BelkGiftCardAmount;0.00</custom-attribute>
+            <custom-attribute attribute-id="paymentMethodBRD">182000760513281;10</custom-attribute>
+            <custom-attribute attribute-id="processOffline">false</custom-attribute>
+            <custom-attribute attribute-id="totalNumberLines">4</custom-attribute>
+        </custom-attributes>
+    </order>
+	</orders>
