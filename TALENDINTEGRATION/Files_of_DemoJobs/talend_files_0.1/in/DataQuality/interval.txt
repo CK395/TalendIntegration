@@ -1,0 +1,4 @@
+vehicule,min,max
+big mory,1600,2000
+mory,1000,1600
+car,500,1000

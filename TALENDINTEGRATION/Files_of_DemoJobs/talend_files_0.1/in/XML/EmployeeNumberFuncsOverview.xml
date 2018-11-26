@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<stylesheetinfo>
+	<category>DataFormatting</category>
+	<subcategory>Numeric Functions</subcategory>
+	<styelsheetname>EmployeeNumberFuncs</styelsheetname>
+	<heading>Numeric Formatting</heading>
+	<description>This stylsheet demonstrates how various numeric formatting masks (&quot;000.00&quot;, &quot;$#00%&quot;, &quot;###0.00&quot;) can be used to display numeric data in various output formats.</description>
+	<creationdate>05/16/2001</creationdate>
+	<xslelements>
+		<xslelement elementname="xsl:value-of"/>
+		<xslelement elementname="format-number()"/>
+		<xslelement elementname="number()"/>
+	</xslelements>
+	<notes>
+	</notes>
+	<author>David Silverlight</author>
+	<emails>
+		<email>DSilverlight@Infoteria.com</email>
+		<email>HeadGeek@xmlpitstop.com</email>
+		<email>DavidSilverlight@hotmail.com</email>
+	</emails>
+</stylesheetinfo>

@@ -1,0 +1,10 @@
+008text5     2007-01-21true      
+003text6     2004-11-21true      
+010text7     2005-08-28false     
+003text10    2007-02-22false     
+010text4     2005-07-27true      
+006text8     2005-07-27false     
+008text10    2004-11-21true      
+007text3     2007-03-23true      
+009text5     2007-02-22true      
+005text4     2007-02-22false     

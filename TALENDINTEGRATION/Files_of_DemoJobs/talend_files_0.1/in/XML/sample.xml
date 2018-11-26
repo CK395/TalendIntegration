@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="TP02_Q3.xsd" label="mabiblio"> 
+<biblio>
+    <book id="1">
+        <title subtitle="gk pour tous"/>
+        <author>Pepper</author>
+        <volumes>
+            <volume VolumeNo="1" nbPages="22"/> 
+        </volumes>
+        <PublishingInfos>
+            <publisher>eyrolles</publisher>
+            <PublishedIn>France</PublishedIn>
+            <PrintedIn>Italie</PrintedIn> 
+            <ISBN>0123456789</ISBN>
+        </PublishingInfos>
+    </book>
+    <book id="2">
+        <title subtitle="Java Initiation"/>
+        <author>Legrand</author>
+        <volumes> 
+            <volume VolumeNo="1" nbPages="44"/>
+            <volume VolumeNo="2" nbPages="88"/>
+        </volumes>
+        <PublishingInfos>
+            <publisher>eyrolles</publisher>
+            <PublishedIn>France</PublishedIn>
+            <PrintedIn>Italie</PrintedIn>
+            <ISBN>012ggdfdg</ISBN> 
+        </PublishingInfos>
+    </book>
+</biblio>
+
+<customers>
+  <country name="USA">
+    <state name="Alabama" capital="Montgomery">
+      <customer firstname="Paul" lastname="MacCartney">
+      </customer>
+      <customer firstname="Angus" lastname="Young">
+      </customer>      
+	  <customer firstname="Piere" lastname="Legrand">
+      </customer>
+      <customer firstname="Led" lastname="Zeppelin">
+      </customer>
+      <person firstname="Joe" lastname="Satriani"> 
+      </person>
+      <person firstname="Brian" lastname="May">
+      </person>
+    </state>
+    <state name="Nebraska" capital="Lincoln"> 
+      <customer firstname="Michael" lastname="Jackson">
+      </customer>
+      <customer firstname="Patrick" lastname="Rondat"> 
+      </customer>
+      <person firstname="Keith" lastname="Richards">
+      </person>
+    </state>
+  </country>
+</customers>
+</root>

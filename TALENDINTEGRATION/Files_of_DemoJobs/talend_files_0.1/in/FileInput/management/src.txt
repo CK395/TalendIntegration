@@ -1,0 +1,10 @@
+8;text10;2007-03-23;false
+9;text6;2007-01-21;false
+4;text8;2005-08-29;true
+5;text10;2005-08-29;true
+2;text4;2004-11-21;false
+9;text4;2007-02-22;true
+1;text10;2006-04-24;false
+6;text5;2005-08-28;false
+8;text2;2007-01-21;true
+1;text2;2006-06-26;false
