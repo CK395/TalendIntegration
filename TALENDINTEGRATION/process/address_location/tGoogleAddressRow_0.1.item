@@ -1,94 +1,98 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
-    <elementParameter field="DIRECTORY" name="COMP_DEFAULT_FILE_DIR" value="/home/scorreia/DEMOS/Talend-5.0.0M5/studio/Talend-All-r69141-V5.0.0M5/workspace"/>
-    <elementParameter field="DIRECTORY" name="PRODUCT_ROOT_DIR" value="/home/scorreia/DEMOS/Talend-5.0.0M5/studio/Talend-All-r69141-V5.0.0M5"/>
-    <elementParameter field="DIRECTORY" name="COMP_DEFAULT_PROJECT_DIR" value="/home/scorreia/DEMOS/Talend-5.0.0M5/studio/Talend-All-r69141-V5.0.0M5/workspace/TDQEEDEMOJAVA"/>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;]}"/>
-    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="AUTHOR" value="trunk@talend.com"/>
-    <elementParameter field="TEXT" name="STATUS" value=""/>
-    <elementParameter field="TEXT" name="NAME" value="tGoogleAddressRow"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.1"/>
-    <elementParameter field="TEXT" name="PURPOSE" value=""/>
-    <elementParameter field="TEXT" name="DESCRIPTION" value=""/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
-    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
-    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
     <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
-    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
-    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
-    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
-    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PASS_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
-    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
-    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/Talend/Talend_Products/Talend-All-r60477-V4.2.1NB/workspace/.metadata&quot;"/>
-    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;"/>
-    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;"/>
-    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;&quot;"/>
-    <elementParameter field="TABLE" name="DRIVER_JAR"/>
-    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
-    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
-    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value=""/>
-    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false"/>
-    <elementParameter field="TEXT" name="HEADER_LIBRARY" value=""/>
-    <elementParameter field="TEXT" name="HEADER_CODE" value=""/>
-    <elementParameter field="TEXT" name="HEADER_IMPORT" value=""/>
-    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value=""/>
-    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false"/>
-    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value=""/>
-    <elementParameter field="TEXT" name="FOOTER_CODE" value=""/>
-    <elementParameter field="TEXT" name="FOOTER_IMPORT" value=""/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/Talend-Studio-20181026_1147-V7.1.1/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
     <routinesParameter id="_obbtUM7-EeCsNuPY2Ml1PA" name="DataOperation"/>
     <routinesParameter id="_ob3yMM7-EeCsNuPY2Ml1PA" name="Mathematical"/>
     <routinesParameter id="_ocLUMM7-EeCsNuPY2Ml1PA" name="Numeric"/>
@@ -103,81 +107,82 @@
     <routinesParameter id="_LaqA4H-NEeCx04HGvj8drw" name="DataQuality"/>
     <routinesParameter id="_Lax8sH-NEeCx04HGvj8drw" name="DqStringHandling"/>
     <routinesParameter id="_Lazx4H-NEeCx04HGvj8drw" name="MDM"/>
+    <routinesParameter id="_aRVGQO7qEeiXFculwLT77Q" name="DataMasking"/>
+    <routinesParameter id="_aT55IO7qEeiXFculwLT77Q" name="DataQualityDependencies"/>
+    <routinesParameter id="_aXs0AO7qEeiXFculwLT77Q" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1"/>
-    <elementParameter field="CHECK" name="START" value="true"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="10"/>
-    <elementParameter field="TABLE" name="VALUES">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="10"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="address_id"/>
       <elementValue elementRef="ARRAY" value="&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot; "/>
       <elementValue elementRef="SCHEMA_COLUMN" value="address"/>
-      <elementValue elementRef="ARRAY" value="&quot;5150 El Camino Real, Suite C-31 Los Altos, CA 94022&quot;, &quot;6 Executive Circle, Suite 200 Irvine, CA 92614&quot;, &quot;8 New England Executive Park, Suite 170 Burlington, MA 01803&quot;, &quot;220 White Plains Road, Suite 390 Tarrytown, NY 10591&quot;, &quot;9 rue Pagès 92150 Suresnes&quot;, &quot;Berkshire House Queen Street Maidenhead Berkshire SL6 1NF&quot;, &quot;Südwestpark 44 90449 Nürnberg&quot;, &quot;Servatiusstrasse 53 53175 Bonn&quot;, &quot;Hohenlindner Strasse 11b 85622 Feldkirchen&quot;, &quot;Königsallee 92a 40212 Düsseldorf&quot;, &quot;Via Zanica 17 24050 Grassobbio BG&quot;, &quot;Rm 30302, Floor 3, Scitech Place, No. 22, Jianguomenwai Avenue,Chaoyang District, Beijing 100004&quot;, &quot;東京都港区南青山5-10-13 デコパージュ南青山4F&quot;  "/>
+      <elementValue elementRef="ARRAY" value="&quot;5150 El Camino Real, Suite C-31 Los Altos, CA 94022&quot;, &quot;6 Executive Circle, Suite 200 Irvine, CA 92614&quot;, &quot;8 New England Executive Park, Suite 170 Burlington, MA 01803&quot;, &quot;220 White Plains Road, Suite 390 Tarrytown, NY 10591&quot;, &quot;9 rue Pagès 92150 Suresnes&quot;, &quot;Berkshire House Queen Street Maidenhead Berkshire SL6 1NF&quot;, &quot;Südwestpark 44 90449 Nürnberg&quot;, &quot;Servatiusstrasse 53 53175 Bonn&quot;, &quot;Hohenlindner Strasse 11b 85622 Feldkirchen&quot;, &quot;Königsallee 92a 40212 Düsseldorf&quot;, &quot;Via Zanica 17 24050 Grassobbio BG&quot;, &quot;Rm 30302, Floor 3, Scitech Place, No. 22, Jianguomenwai Avenue,Chaoyang District, Beijing 100004&quot;, &quot;東京都港区南青山5-10-13 デコパージュ南青山4F&quot; "/>
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TEXT" name="LABEL" value="generate_addresses"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tRowGenerator_1">
-      <column comment="" key="false" length="5" name="address_id" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" length="200" name="address" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="address_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;0\&quot;,\&quot;1\&quot;,\&quot;2\&quot;,\&quot;3\&quot;,\&quot;4\&quot;,\&quot;5\&quot;,\&quot;6\&quot;,\&quot;7\&quot;,\&quot;8\&quot;,\&quot;9\&quot;,\&quot;10\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" key="false" length="200" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;5150 El Camino Real, Suite C-31 Los Altos, CA 94022\&quot;, \&quot;6 Executive Circle, Suite 200 Irvine, CA 92614\&quot;, \&quot;8 New England Executive Park, Suite 170 Burlington, MA 01803\&quot;, \&quot;220 White Plains Road, Suite 390 Tarrytown, NY 10591\&quot;, \&quot;9 rue Pagès 92150 Suresnes\&quot;, \&quot;Berkshire House Queen Street Maidenhead Berkshire SL6 1NF\&quot;, \&quot;Südwestpark 44 90449 Nürnberg\&quot;, \&quot;Servatiusstrasse 53 53175 Bonn\&quot;, \&quot;Hohenlindner Strasse 11b 85622 Feldkirchen\&quot;, \&quot;Königsallee 92a 40212 Düsseldorf\&quot;, \&quot;Via Zanica 17 24050 Grassobbio BG\&quot;, \&quot;Rm 30302, Floor 3, Scitech Place, No. 22, Jianguomenwai Avenue,Chaoyang District, Beijing 100004\&quot;, \&quot;東京都港区南青山5-10-13 デコパージュ南青山4F\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
     </metadata>
   </node>
   <node componentName="tGoogleAddressRow" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGoogleAddressRow_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tGoogleAddressRow_1"/>
     <elementParameter field="TEXT" name="PAUSE" value="1"/>
     <elementParameter field="PREV_COLUMN_LIST" name="ADDRESS_COLUMN" value="address"/>
+    <elementParameter field="TEXT" name="API_KEY" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="standardize_addresses"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tGoogleAddressRow_1">
-      <column comment="" key="false" length="5" name="address_id" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" length="200" name="address" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="not just postal addresses, but any way to geographically name a location" defaultValue="" key="false" length="0" name="formatted_address" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short street number" defaultValue="" key="false" length="0" name="street_number_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long street number" defaultValue="" key="false" length="0" name="street_number_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short route" defaultValue="" key="false" length="0" name="route_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long route" defaultValue="" key="false" length="0" name="route_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short locality" defaultValue="" key="false" length="0" name="locality_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long locality" defaultValue="" key="false" length="0" name="locality_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short sub locality" defaultValue="" key="false" length="0" name="sublocality_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long sub locality" defaultValue="" key="false" length="0" name="sublocality_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short country name" defaultValue="" key="false" length="0" name="country_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long country name" defaultValue="" key="false" length="0" name="country_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short postal code" defaultValue="" key="false" length="0" name="postal_code_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long postal code" defaultValue="" key="false" length="0" name="postal_code_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="location type" defaultValue="" key="false" length="0" name="location_type" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="partial match type" defaultValue="" key="false" length="0" name="partial_match" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="latitude" defaultValue="" key="false" length="20" name="lat" nullable="true" precision="0" sourceType="" type="id_Double"/>
-      <column comment="longitude" defaultValue="" key="false" length="20" name="lng" nullable="true" precision="0" sourceType="" type="id_Double"/>
-      <column comment="status" defaultValue="" key="false" length="0" name="status" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="address_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="not just postal addresses, but any way to geographically name a location" defaultValue="" key="false" length="0" name="formatted_address" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short street number" defaultValue="" key="false" length="0" name="street_number_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long street number" defaultValue="" key="false" length="0" name="street_number_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short route" defaultValue="" key="false" length="0" name="route_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long route" defaultValue="" key="false" length="0" name="route_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short locality" defaultValue="" key="false" length="0" name="locality_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long locality" defaultValue="" key="false" length="0" name="locality_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short sub locality" defaultValue="" key="false" length="0" name="sublocality_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long sub locality" defaultValue="" key="false" length="0" name="sublocality_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short country name" defaultValue="" key="false" length="0" name="country_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long country name" defaultValue="" key="false" length="0" name="country_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short postal code" defaultValue="" key="false" length="0" name="postal_code_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long postal code" defaultValue="" key="false" length="0" name="postal_code_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="location type" defaultValue="" key="false" length="0" name="location_type" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="partial match type" defaultValue="" key="false" length="0" name="partial_match" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="latitude" defaultValue="" key="false" length="20" name="lat" nullable="true" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="longitude" defaultValue="" key="false" length="20" name="lng" nullable="true" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="status" defaultValue="" key="false" length="0" name="status" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS">
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="address_id"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="address"/>
@@ -231,43 +236,40 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="status"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_2">
-      <column comment="" key="false" length="5" name="address_id" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="" key="false" length="200" name="address" nullable="true" pattern="" sourceType="" type="id_String"/>
-      <column comment="not just postal addresses, but any way to geographically name a location" defaultValue="" key="false" length="0" name="formatted_address" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short street number" defaultValue="" key="false" length="0" name="street_number_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long street number" defaultValue="" key="false" length="0" name="street_number_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short route" defaultValue="" key="false" length="0" name="route_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long route" defaultValue="" key="false" length="0" name="route_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short locality" defaultValue="" key="false" length="0" name="locality_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long locality" defaultValue="" key="false" length="0" name="locality_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short sub locality" defaultValue="" key="false" length="0" name="sublocality_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long sub locality" defaultValue="" key="false" length="0" name="sublocality_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short country name" defaultValue="" key="false" length="0" name="country_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long country name" defaultValue="" key="false" length="0" name="country_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="short postal code" defaultValue="" key="false" length="0" name="postal_code_short" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="long postal code" defaultValue="" key="false" length="0" name="postal_code_long" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="location type" defaultValue="" key="false" length="0" name="location_type" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="partial match type" defaultValue="" key="false" length="0" name="partial_match" nullable="true" precision="0" sourceType="" type="id_String"/>
-      <column comment="latitude" defaultValue="" key="false" length="20" name="lat" nullable="true" precision="0" sourceType="" type="id_Double"/>
-      <column comment="longitude" defaultValue="" key="false" length="20" name="lng" nullable="true" precision="0" sourceType="" type="id_Double"/>
-      <column comment="status" defaultValue="" key="false" length="0" name="status" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="address_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="not just postal addresses, but any way to geographically name a location" defaultValue="" key="false" length="0" name="formatted_address" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short street number" defaultValue="" key="false" length="0" name="street_number_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long street number" defaultValue="" key="false" length="0" name="street_number_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short route" defaultValue="" key="false" length="0" name="route_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long route" defaultValue="" key="false" length="0" name="route_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short locality" defaultValue="" key="false" length="0" name="locality_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long locality" defaultValue="" key="false" length="0" name="locality_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short sub locality" defaultValue="" key="false" length="0" name="sublocality_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long sub locality" defaultValue="" key="false" length="0" name="sublocality_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long admin area level 1" defaultValue="" key="false" length="0" name="adm_area1_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long admin area level 2" defaultValue="" key="false" length="0" name="adm_area2_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long admin area level 3" defaultValue="" key="false" length="0" name="adm_area3_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short country name" defaultValue="" key="false" length="0" name="country_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long country name" defaultValue="" key="false" length="0" name="country_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="short postal code" defaultValue="" key="false" length="0" name="postal_code_short" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="long postal code" defaultValue="" key="false" length="0" name="postal_code_long" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="location type" defaultValue="" key="false" length="0" name="location_type" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="partial match type" defaultValue="" key="false" length="0" name="partial_match" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="latitude" defaultValue="" key="false" length="20" name="lat" nullable="true" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="longitude" defaultValue="" key="false" length="20" name="lng" nullable="true" precision="0" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="status" defaultValue="" key="false" length="0" name="status" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tGoogleAddressRow_1">
-    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="address_id"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
@@ -276,25 +278,11 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
-    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
-    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
-    <elementParameter field="TABLE" name="THRESHLODS"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tGoogleAddressRow_1" offsetLabelX="0" offsetLabelY="0" source="tGoogleAddressRow_1" target="tLogRow_2">
-    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="Company"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
@@ -375,49 +363,22 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
-    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
-    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
-    <elementParameter field="TABLE" name="THRESHLODS"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="false"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value=""/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value=""/>
-    <elementParameter field="CHECK" name="ACTIVEBREAKPOINT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
-    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
   </connection>
-  <note opaque="true" posX="32" posY="32" sizeHeight="97" sizeWidth="577" text="This job retrieves standardized addresses from Google given some addresses.">
-    <elementParameter field="COLOR" name="NOTE_COLOR" value="255;255;203"/>
-    <elementParameter field="COLOR" name="NOTETXT_COLOR" value="0;0;0"/>
-    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="false"/>
-    <elementParameter field="RADIO" name="NOTETXT_RIGHT" value="false"/>
-    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="true"/>
-    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="true"/>
-    <elementParameter field="RADIO" name="NOTETXT_TOP" value="false"/>
-    <elementParameter field="RADIO" name="NOTETXT_BOTTOM" value="false"/>
-    <elementParameter field="TEXT" name="NOTE_FONT" value="Time New Roman"/>
-    <elementParameter field="TEXT" name="FONT_SIZE" value="10"/>
-    <elementParameter field="CHECK" name="FONT_BOLD" value="false"/>
-    <elementParameter field="CHECK" name="FONT_ITALIC" value="false"/>
-    <elementParameter field="COLOR" name="NOTE_LINECOLOR" value="237;201;122"/>
-  </note>
+  <note opaque="false" posX="32" posY="32" sizeHeight="97" sizeWidth="577" text="This job retrieves standardized addresses from Google given some addresses."/>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="160;190;240"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4b15fc9a-41be-418f-a49f-5d96bab6f207"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hrW9nB0sfnBsWPs6qAF3zUrNagCKazTNCgXrT1mQ2k9TjPat2BLgKTNj6l0i7QD77IFEdDWPU3gm
-uh/A2Y0B+A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_59a8f291-ff73-431a-aecc-32f1329444c4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oi1O236EIkXtR9iTFzHRsoolDXFLEEru6Fl8SufUexNFwHzWNbDiXQL83GNV84j95ihXmB9cRRZt
-pxYLqFCegA==</DigestValue></Reference></SignedInfo><SignatureValue>G0DFXLe20mHtIevw5aj7yJYKI0FwfAKq75R/RtQa+7pwu+OQw5+lpfM7MpgqVJ/JrBMhJ7pm8oHz
-HG17t1OCDEz0dYHE/cPLyIcn1y5fp08Uvk+swCLu9Zszooa5socPDGOeno03uA/gyxRvRVVvI4Yi
-jlOFqNdC845F2CMcpkhQsxYY5LDIaXbqdTLHkaPuHMQJtPdYVmX1yxvEhHd0+t5j7b9zZ5ovM4xW
-Enyowo9hTwL6d38sqT4vZ0+WpoG1OGItMaSM7DZ7TwZQlEp4PVU64EwMfJI+K5Sul00OsNKSrwbI
-6wskqYbzh93g93BMoz2LF5MP+34jaf1VSGxlUw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b9a94e58-20a1-4b83-a09a-f7ec389d7cae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P/VNffUmKB3kkgZ+8uHgQcPewGq15JE3IezbOyRTJeR5Vyq5e5VqS+fS4feSv4AszmT9DAaji2RK
+UdlZwILbqg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_98ea1a44-6b8d-4891-9250-0ee25ca9bb3b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>j9EpjHzLo+qjvq+KnCCy+1bsPmYlqioKNjk8EGyDpGWMrA5ZBuFH43RxFYn0CrGhktF0+MqJEePV
+HMtQLReJtg==</DigestValue></Reference></SignedInfo><SignatureValue>IpyzBfgnQeiDVVBz2m/9EeHV6ZHIDs5uW99XTQ1xHUFkvXA+tJQh3pnRE0vqxT6Yx0NbVG+ydw00
+z9acxv+k/YPvPnyVc87auTee1FaZ4drOachuB/G4Ed2fgKHS//y1VTaEc+eB29NCU891+Fn7TKk0
+H8y4sOr3BTSwtYzEIIv8vRFMZmDZX4DHfX0/j11P24T/Lc50uojvnQaV5o2yMOOIzHFs7qouCBUz
+8xXni1k8a0kBpi/1dpXchsr+aneuk5zukuAMmb9rVErEaauKP9waImw28nGa9yEnxMS65Ch+h3Dm
+1QaYEvOY9ofLc8fwAV3C3mBUZ/mFraVc7yhhkQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -441,4 +402,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_59a8f291-ff73-431a-aecc-32f1329444c4" Target="#_4b15fc9a-41be-418f-a49f-5d96bab6f207"><Timestamp>2018-11-23 14:04:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_98ea1a44-6b8d-4891-9250-0ee25ca9bb3b" Target="#_b9a94e58-20a1-4b83-a09a-f7ec389d7cae"><Timestamp>2018-11-26 08:45:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
