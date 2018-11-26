@@ -219,13 +219,14 @@
     <module>jobs/process/dedupe_jobs/c1_merge_exact_duplicates_0.1</module>
     <module>jobs/process/standardization_examples/address/a2_standardizeaddress_0.1</module>
     <module>jobs/process/standardization_examples/address/address_standardization_0.1</module>
+    <module>jobs/process/Example_Jobs/joblet_job_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TALENDINTEGRATION</talend.project.name>
     <encoding>UTF-8</encoding>
     <talend.version>7.1.1</talend.version>
-    <maven.deploy.skip>true</maven.deploy.skip>
     <talend.docker.tag>${project.version}</talend.docker.tag>
+    <maven.deploy.skip>true</maven.deploy.skip>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
   </properties>
   <build>
