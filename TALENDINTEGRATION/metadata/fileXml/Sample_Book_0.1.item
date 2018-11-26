@@ -1,68 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
-  <TalendMetadata:XmlFileConnection Encoding="ISO-8859-1" XmlFilePath="/home/nfrancisco/Talend/talend_files_0.1/in/XML/sample.xml" dataPackage="_xze3EWD7EeCFQbmPuExx4A" xmi:id="_xze3EGD7EeCFQbmPuExx4A">
-    <schema AbsoluteXPathQuery="/root/biblio/livre" LimitBoucle="50" xmi:id="_xzfeJ2D7EeCFQbmPuExx4A">
-      <schemaTargets RelativeXPathQuery="@id" TagName="id" xmi:id="_xzfeIGD7EeCFQbmPuExx4A"/>
-      <schemaTargets RelativeXPathQuery="titre/@sousTitre" TagName="sousTitre" xmi:id="_xzfeIWD7EeCFQbmPuExx4A"/>
-      <schemaTargets RelativeXPathQuery="auteur" TagName="auteur" xmi:id="_xzfeImD7EeCFQbmPuExx4A"/>
-      <schemaTargets RelativeXPathQuery="infosEdition/editeur" TagName="editeur" xmi:id="_xzfeI2D7EeCFQbmPuExx4A"/>
-      <schemaTargets RelativeXPathQuery="infosEdition/lieuEdition" TagName="lieuEdition" xmi:id="_xzfeJGD7EeCFQbmPuExx4A"/>
-      <schemaTargets RelativeXPathQuery="infosEdition/lieuImpression" TagName="lieuImpression" xmi:id="_xzfeJWD7EeCFQbmPuExx4A"/>
-      <schemaTargets RelativeXPathQuery="infosEdition/ISBN" TagName="ISBN" xmi:id="_xzfeJmD7EeCFQbmPuExx4A"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:XmlFileConnection xmi:id="_xze3EGD7EeCFQbmPuExx4A" name="Sample_Book" label="Sample_Book" dataPackage="_xze3EWD7EeCFQbmPuExx4A" XmlFilePath="/home/nfrancisco/Talend/talend_files_0.1/in/XML/sample.xml" Encoding="ISO-8859-1">
+    <schema xmi:id="_xzfeJ2D7EeCFQbmPuExx4A" LimitBoucle="50" AbsoluteXPathQuery="/root/biblio/livre">
+      <schemaTargets xmi:id="_xzfeIGD7EeCFQbmPuExx4A" RelativeXPathQuery="@id" TagName="id"/>
+      <schemaTargets xmi:id="_xzfeIWD7EeCFQbmPuExx4A" RelativeXPathQuery="titre/@sousTitre" TagName="sousTitre"/>
+      <schemaTargets xmi:id="_xzfeImD7EeCFQbmPuExx4A" RelativeXPathQuery="auteur" TagName="auteur"/>
+      <schemaTargets xmi:id="_xzfeI2D7EeCFQbmPuExx4A" RelativeXPathQuery="infosEdition/editeur" TagName="editeur"/>
+      <schemaTargets xmi:id="_xzfeJGD7EeCFQbmPuExx4A" RelativeXPathQuery="infosEdition/lieuEdition" TagName="lieuEdition"/>
+      <schemaTargets xmi:id="_xzfeJWD7EeCFQbmPuExx4A" RelativeXPathQuery="infosEdition/lieuImpression" TagName="lieuImpression"/>
+      <schemaTargets xmi:id="_xzfeJmD7EeCFQbmPuExx4A" RelativeXPathQuery="infosEdition/ISBN" TagName="ISBN"/>
     </schema>
   </TalendMetadata:XmlFileConnection>
-  <TalendMetadata:GenericPackage dataManager="_xze3EGD7EeCFQbmPuExx4A" xmi:id="_xze3EWD7EeCFQbmPuExx4A">
-    <ownedElement id="_XcRYQB1CEd-XVfHSJU420w" label="livres" xmi:id="_xze3IGD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataTable">
-      <feature label="id" length="1" name="" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_Integer" xmi:id="_xze3EmD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataColumn">
-        <initialValue body="" xmi:id="_xze3E2D7EeCFQbmPuExx4A"/>
+  <TalendMetadata:GenericPackage xmi:id="_xze3EWD7EeCFQbmPuExx4A" dataManager="_xze3EGD7EeCFQbmPuExx4A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_xze3IGD7EeCFQbmPuExx4A" id="_XcRYQB1CEd-XVfHSJU420w" label="livres">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xze3EmD7EeCFQbmPuExx4A" name="" label="id" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_xze3E2D7EeCFQbmPuExx4A" body=""/>
       </feature>
-      <feature label="sousTitre" length="15" name="" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_xze3FGD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataColumn">
-        <initialValue body="" xmi:id="_xze3FWD7EeCFQbmPuExx4A"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xze3FGD7EeCFQbmPuExx4A" name="" label="sousTitre" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_xze3FWD7EeCFQbmPuExx4A" body=""/>
       </feature>
-      <feature label="auteur" length="7" name="" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_xze3FmD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataColumn">
-        <initialValue body="" xmi:id="_xze3F2D7EeCFQbmPuExx4A"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xze3FmD7EeCFQbmPuExx4A" name="" label="auteur" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_xze3F2D7EeCFQbmPuExx4A" body=""/>
       </feature>
-      <feature label="editeur" length="8" name="" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_xze3GGD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataColumn">
-        <initialValue body="" xmi:id="_xze3GWD7EeCFQbmPuExx4A"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xze3GGD7EeCFQbmPuExx4A" name="" label="editeur" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_xze3GWD7EeCFQbmPuExx4A" body=""/>
       </feature>
-      <feature label="lieuEdition" length="6" name="" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_xze3GmD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataColumn">
-        <initialValue body="" xmi:id="_xze3G2D7EeCFQbmPuExx4A"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xze3GmD7EeCFQbmPuExx4A" name="" label="lieuEdition" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_xze3G2D7EeCFQbmPuExx4A" body=""/>
       </feature>
-      <feature label="lieuImpression" length="6" name="" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_xze3HGD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataColumn">
-        <initialValue body="" xmi:id="_xze3HWD7EeCFQbmPuExx4A"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xze3HGD7EeCFQbmPuExx4A" name="" label="lieuImpression" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_xze3HWD7EeCFQbmPuExx4A" body=""/>
       </feature>
-      <feature label="ISBN" length="10" name="" pattern="&quot;dd-MM-yyyy&quot;" talendType="id_String" xmi:id="_xze3HmD7EeCFQbmPuExx4A" xsi:type="TalendMetadata:MetadataColumn">
-        <initialValue body="" xmi:id="_xze3H2D7EeCFQbmPuExx4A"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xze3HmD7EeCFQbmPuExx4A" name="" label="ISBN" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_xze3H2D7EeCFQbmPuExx4A" body=""/>
       </feature>
     </ownedElement>
   </TalendMetadata:GenericPackage>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7864a2e1-ecd2-4d86-b68d-8b2e35de1ae8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HhQRlNM0xXquyEpI/jf3za7CWX8wtpxr0Qg9wHWgsIxBzOMHkXsyAhP0ewzqufTC8NQPDaO4HfTt
-6Is9LfhLQA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d87aced3-53df-42ee-a01e-18c1abbdcf80"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qCa3FImUTOtTB4hpkxFqiW90WwxIjwqJeGtVBttJLi2Y+CJuSBQj/keA169uYIB3ao0OBTQC+Lg9
-M2wOAn9sdg==</DigestValue></Reference></SignedInfo><SignatureValue>pmbs6rcMj6wN6essypYF9EjnHcKzGH/LOhDP839tl7VfCpABtPYzNd/nxNvP7x+SUhphcdIWHkd1
-VYp1p2Fzvl9LXUQCOurrKs9rfLenZmOc2IHit/8pZqJskriFFWCLz+Bnmf2U/42JKs0UGWKDyG4a
-kinHBUyHCcVUy2SqVkd7WJFf6Iu1krz7FbXG2QXr9G8tUOci5SvtXnaDeTndfpHdiX1GmklF7hnF
-DNEIdr/X7Ldvfi7yRKLTEsZWFgpSANw3eP/3+sa6Y9zrc8UT4mlAPRafe/6Q9mrXtZpkmGNJoyvW
-eQItlQMYXrgZ8CJn5w76H1/LxppRVxt0Qk3ujA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
-BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
-RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
-LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
-VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
-RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
-ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
-rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
-UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
-lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
-sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
-FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
-A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
-FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
-bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
-KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
-ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
-Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
-S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
-QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
-r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
-EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
-BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
-6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d87aced3-53df-42ee-a01e-18c1abbdcf80" Target="#_7864a2e1-ecd2-4d86-b68d-8b2e35de1ae8"><Timestamp>2018-11-23 14:03:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+</xmi:XMI>
