@@ -57,70 +57,6 @@
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF5BtX-OEeCx04HGvj8drw" body="SELECT COUNT(`Column0`) FROM `cif`.`customer` WHERE TRIM(`Column0`) = '' " language="MySQL"/>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5sHwH-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5sHwX-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zsH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5sHwn-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zsX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5sHw3-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zsn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5sHxH-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zuX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5sHxX-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zun-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5sHxn-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zu3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5sHx3-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2ztn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5sHyH-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zt3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5sHyX-QEeCx04HGvj8drw" computed="true" length="4">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zuH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5sHyn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zs3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5sHy3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2ztH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5sHzH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2ztX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
-      </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5sHzX-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="1" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C77080000001000000001740004393939397372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000013E78">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -160,70 +96,6 @@
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF5Bu3-OEeCx04HGvj8drw" body="SELECT COUNT(`Column1`) FROM `cif`.`customer` WHERE TRIM(`Column1`) = '' " language="MySQL"/>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5sHz3-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5sH0H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz3awn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5sH0X-QEeCx04HGvj8drw" computed="true" length="23">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B0H-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5sH0n-QEeCx04HGvj8drw" computed="true" length="12">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B0X-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5sH03-QEeCx04HGvj8drw" computed="true" length="12">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B2H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5sH1H-QEeCx04HGvj8drw" computed="true" length="12">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B2X-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5sH1X-QEeCx04HGvj8drw" computed="true" length="12">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4o4H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5sH1n-QEeCx04HGvj8drw" computed="true" length="23">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B1X-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5sH13-QEeCx04HGvj8drw" computed="true" length="23">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B1n-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5sH2H-QEeCx04HGvj8drw" computed="true" length="23">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B13-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5sH2X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B0n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5sH2n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B03-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5sH23-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B1H-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5sH3H-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A74000F4161204161616161204161616161617372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000A7400124161204161616161612041616161616161617371007E0003000000000000000C74001141612041616161616161204161616161617371007E0003000000000000000D74001141612041616161616120416161616161617371007E0003000000000000000B74000D4161204161616120416161616171007E00057400104161204161616161204161616161616171007E000974000E416120416161616120416161616171007E000574000D4161204161616161204161616171007E000B740010416120416161616161204161616161617371007E0003000000000000001C74000F4161204161616161612041616161617371007E0003000000000000001378">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
@@ -265,70 +137,6 @@
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF5oxH-OEeCx04HGvj8drw" body="SELECT COUNT(`Column2`) FROM `cif`.`customer` WHERE TRIM(`Column2`) = '' " language="MySQL"/>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5sH3n-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5sH33-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P8n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5sH4H-QEeCx04HGvj8drw" computed="true" length="28">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P83-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5sH4X-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P9H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5sH4n-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53BH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5sH43-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53BX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5sH5H-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53Bn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5sH5X-QEeCx04HGvj8drw" computed="true" length="28">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53AX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5sH5n-QEeCx04HGvj8drw" computed="true" length="28">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53An-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5sH53-QEeCx04HGvj8drw" computed="true" length="28">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53A3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5sH6H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P9X-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5sH6X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P9n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5sH6n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53AH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
-      </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5sH63-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A74000D416161616120416161612039397372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000774000F4161616161616120416161612039397371007E0003000000000000000C740014416161616161616161616120416161616120393971007E00057400184161616161204161616161616161204161616161612039397371007E0003000000000000000874001141616161616161616120416161612039397371007E0003000000000000000B7400134161616161204161616120416161616120393971007E000A740010416161616161616120416161612039397371007E0003000000000000000E74001241616161612041616161616161616120393971007E000C7400104161616161612041616161616120393971007E000774001841616161612041616161612041616161204161616120393971007E000578">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -368,70 +176,6 @@
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF5oyn-OEeCx04HGvj8drw" body="SELECT COUNT(`Column3`) FROM `cif`.`customer` WHERE TRIM(`Column3`) = '' " language="MySQL"/>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5sH7X-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5sH7n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eEX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5sH73-QEeCx04HGvj8drw" computed="true" length="5">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eEn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5sH8H-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eE3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5sH8X-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5sH8n-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5sH83-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJ3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5sH9H-QEeCx04HGvj8drw" computed="true" length="5">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FIn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5sH9X-QEeCx04HGvj8drw" computed="true" length="5">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FI3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5sH9n-QEeCx04HGvj8drw" computed="true" length="5">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5sH93-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eFH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5sH-H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FIH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5sH-X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FIX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5sH-n-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="6" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C770800000010000000067400053939412D397372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000001740005393941413971007E000574000539393939397371007E000300000000000001347400033939397371007E00030000000000000002740004393939397371007E00030000000000000005740005393941393971007E000578">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
@@ -483,70 +227,6 @@
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF6P1X-OEeCx04HGvj8drw" body="SELECT COUNT(`Column4`) FROM `cif`.`customer` WHERE TRIM(`Column4`) = '' " language="MySQL"/>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5sH_H-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5sH_X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5sH_n-QEeCx04HGvj8drw" computed="true" length="25">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5sH_3-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5sIAH-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TSX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5sIAX-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TSn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5sIAn-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TS3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5sIA3-QEeCx04HGvj8drw" computed="true" length="25">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TRn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5sIBH-QEeCx04HGvj8drw" computed="true" length="25">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TR3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5sIBX-QEeCx04HGvj8drw" computed="true" length="25">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TSH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5sIBn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQ3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5sIB3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TRH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5sICH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TRX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
-      </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5sICX-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A74000541616161617372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000001574000841616161616161617371007E000300000000000000267400094161616161616161617371007E0003000000000000002274000B41616161612041616161617371007E0003000000000000000774000A416161616161616161617371007E0003000000000000000F74000C41616161616161616161616171007E000B74000B41616161616161616161617371007E0003000000000000000A740007416161616161617371007E0003000000000000002A7400064161616161617371007E000300000000000000327400044161616171007E001078">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -586,70 +266,6 @@
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF6P23-OEeCx04HGvj8drw" body="SELECT COUNT(`Column5`) FROM `cif`.`customer` WHERE TRIM(`Column5`) = '' " language="MySQL"/>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5sIC3-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5sIDH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hYH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5su0H-QEeCx04HGvj8drw" computed="true" length="11">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hYX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5su0X-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hYn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5su0n-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9haX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5su03-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9han-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5su1H-QEeCx04HGvj8drw" computed="true" length="8">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9ha3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5su1X-QEeCx04HGvj8drw" computed="true" length="11">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5su1n-QEeCx04HGvj8drw" computed="true" length="11">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZ3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5su13-QEeCx04HGvj8drw" computed="true" length="11">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9haH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5su2H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hY3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5su2X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5su2n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5su23-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="7" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000774000A39392D3939392D3939397372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000474000A3939393939392D3939397371007E0003000000000000000174000B3939392D3939392D3939397371007E0003000000000000013374000A3939392D3939392D39397371007E0003000000000000000274000839392D39392D393971007E000774000B3941412D3941412D39414171007E000774000A3939392D39392D39393971007E000B78">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
@@ -701,70 +317,6 @@
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF6P4X-OEeCx04HGvj8drw" body="SELECT COUNT(`Column6`) FROM `cif`.`customer` WHERE TRIM(`Column6`) = '' " language="MySQL"/>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5su3X-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5su3n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vgn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5su33-QEeCx04HGvj8drw" computed="true" length="21">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vg3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5su4H-QEeCx04HGvj8drw" computed="true" length="6">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vhH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5su4X-QEeCx04HGvj8drw" computed="true" length="6">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0CZ4H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5su4n-QEeCx04HGvj8drw" computed="true" length="6">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0CZ4X-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5su43-QEeCx04HGvj8drw" computed="true" length="6">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0CZ4n-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5su5H-QEeCx04HGvj8drw" computed="true" length="21">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_Wkn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5su5X-QEeCx04HGvj8drw" computed="true" length="21">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_Wk3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5su5n-QEeCx04HGvj8drw" computed="true" length="21">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0By0H-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5su53-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vhX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5su6H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_WkH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5su6X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_WkX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
-      </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5su6n-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="10" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000A7400134141616161616161614061616161612E6161617372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000001C74000D4141616161406161612E6161617371007E0003000000000000000C74001241416161616161614061616161612E6161617371007E00030000000000000021740011414161616161616161406161612E6161617371007E00030000000000000009740011414161616161614061616161612E6161617371007E000300000000000000357400104141616161614061616161612E6161617371007E000300000000000000387400104141616161616161406161612E6161617371007E0003000000000000001074000F41416161614061616161612E6161617371007E0003000000000000001574000F41416161616161406161612E6161617371007E0003000000000000002074000E414161616161406161612E6161617371007E0003000000000000001978">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -804,70 +356,6 @@
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF6243-OEeCx04HGvj8drw" body="SELECT COUNT(`Column7`) FROM `cif`.`customer` WHERE TRIM(`Column7`) = '' " language="MySQL"/>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5su7H-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5su7X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA8n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5su7n-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA83-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5su73-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA9H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5su8H-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoA3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5su8X-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoBH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5su8n-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoBX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5su83-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoAH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5su9H-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoAX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5su9X-QEeCx04HGvj8drw" computed="true" length="10">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoAn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5su9n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA9X-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5su93-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA9n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5su-H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA93-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
       </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5su-X-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="2" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000274000A393939392D39392D39397372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000174000A39392D39392D393939397371007E0003000000000000013D78">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
@@ -919,70 +407,6 @@
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF626X-OEeCx04HGvj8drw" body="SELECT COUNT(`Column8`) FROM `cif`.`customer` WHERE TRIM(`Column8`) = '' " language="MySQL"/>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5su-3-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5su_H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPEn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5su_X-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPE3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5su_n-QEeCx04HGvj8drw" computed="true" length="1">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPFH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5su_3-QEeCx04HGvj8drw" computed="true" length="1">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GrUH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5svAH-QEeCx04HGvj8drw" computed="true" length="1">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GrUX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5svAX-QEeCx04HGvj8drw" computed="true" length="1">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GrUn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5svAn-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPGH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5svA3-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPGX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5svBH-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GEQH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5svBX-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPFX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5svBn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPFn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5svB3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPF3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
-      </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5svCH-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="4" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000474000239397372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000001740001417371007E00030000000000000003740001397371007E0003000000000000013974000339393971007E000578">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -1023,70 +447,6 @@
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_xF6273-OEeCx04HGvj8drw" body="SELECT COUNT(`Column9`) FROM `cif`.`customer` WHERE TRIM(`Column9`) = '' " language="MySQL"/>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_N5svCn-QEeCx04HGvj8drw">
-        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
-        <averageLengthIndicator xmi:id="_N5svC3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSYX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
-        </averageLengthIndicator>
-        <maxLengthIndicator xmi:id="_N5svDH-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSYn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthIndicator>
-        <minLengthIndicator xmi:id="_N5svDX-QEeCx04HGvj8drw" computed="true" length="2">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSY3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthIndicator>
-        <minLengthWithBlankIndicator xmi:id="_N5svDn-QEeCx04HGvj8drw" computed="true" length="2">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5cX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankIndicator>
-        <minLengthWithNullIndicator xmi:id="_N5svD3-QEeCx04HGvj8drw" computed="true" length="2">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5cn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithNullIndicator>
-        <minLengthWithBlankNullIndicator xmi:id="_N5svEH-QEeCx04HGvj8drw" computed="true" length="2">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5c3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </minLengthWithBlankNullIndicator>
-        <maxLengthWithBlankIndicator xmi:id="_N5svEX-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZ3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankIndicator>
-        <maxLengthWithNullIndicator xmi:id="_N5svEn-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSaH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithNullIndicator>
-        <maxLengthWithBlankNullIndicator xmi:id="_N5svE3-QEeCx04HGvj8drw" computed="true" length="3">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5cH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
-        </maxLengthWithBlankNullIndicator>
-        <avgLengthWithBlankIndicator xmi:id="_N5svFH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankIndicator>
-        <avgLengthWithNullIndicator xmi:id="_N5svFX-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithNullIndicator>
-        <avgLengthWithBlankNullIndicator xmi:id="_N5svFn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
-          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
-          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
-          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
-        </avgLengthWithBlankNullIndicator>
-      </indicators>
       <indicators xsi:type="dataquality.indicators:PatternFreqIndicator" xmi:id="_N5svF3-QEeCx04HGvj8drw" count="318" computed="true" distinctValueCount="2" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000274000241417372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000013D7400034141417371007E0003000000000000000178">
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Frequency_Table_0.1.definition#_kQzTsJR-Ed2XO-JvLwVAwg"/>
@@ -1096,6 +456,606 @@
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Frequency Statistics/Pattern_Low_Frequency_Table_0.1.definition#_OCTbwJR_Ed2XO-JvLwVAwg"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0JHkH-QEeCx04HGvj8drw" body="SELECT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(`Column9`,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'ç','a'),'â','a'),'ê','a'),'î','a'),'ô','a'),'û','a'),'é','a'),'è','a'),'ù','a'),'ï','a'),'ö','a'),'ü','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'Ç','A'),'Â','A'),'Ê','A'),'Î','A'),'Ô','A'),'Û','A'),'É','A'),'È','A'),'Ù','A'),'Ï','A'),'Ö','A'),'Ü','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9'), COUNT(*) c FROM `cif`.`customer` t  GROUP BY REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(`Column9`,'a','a'),'b','a'),'c','a'),'d','a'),'e','a'),'f','a'),'g','a'),'h','a'),'i','a'),'j','a'),'k','a'),'l','a'),'m','a'),'n','a'),'o','a'),'p','a'),'q','a'),'r','a'),'s','a'),'t','a'),'u','a'),'v','a'),'w','a'),'x','a'),'y','a'),'z','a'),'ç','a'),'â','a'),'ê','a'),'î','a'),'ô','a'),'û','a'),'é','a'),'è','a'),'ù','a'),'ï','a'),'ö','a'),'ü','a'),'A','A'),'B','A'),'C','A'),'D','A'),'E','A'),'F','A'),'G','A'),'H','A'),'I','A'),'J','A'),'K','A'),'L','A'),'M','A'),'N','A'),'O','A'),'P','A'),'Q','A'),'R','A'),'S','A'),'T','A'),'U','A'),'V','A'),'W','A'),'X','A'),'Y','A'),'Z','A'),'Ç','A'),'Â','A'),'Ê','A'),'Î','A'),'Ô','A'),'Û','A'),'É','A'),'È','A'),'Ù','A'),'Ï','A'),'Ö','A'),'Ü','A'),'0','9'),'1','9'),'2','9'),'3','9'),'4','9'),'5','9'),'6','9'),'7','9'),'8','9'),'9','9') ORDER BY c ASC LIMIT 10" language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5sHwX-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zsH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5sHwn-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zsX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5sHw3-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zsn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5sHyn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zs3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5sHy3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2ztH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5sHzH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1272.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2ztX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column0`)), COUNT(`Column0`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5sHx3-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2ztn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5sHyH-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zt3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5sHyX-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zuH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5sHxH-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zuX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5sHxX-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zun-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5sHxn-QEeCx04HGvj8drw" computed="true" length="4">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9HwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz2zu3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column0`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5sH0H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz3awn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5sH0X-QEeCx04HGvj8drw" computed="true" length="23">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B0H-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5sH0n-QEeCx04HGvj8drw" computed="true" length="12">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B0X-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5sH2X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B0n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5sH2n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B03-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5sH23-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5121.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B1H-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column1`)), COUNT(`Column1`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5sH1n-QEeCx04HGvj8drw" computed="true" length="23">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B1X-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5sH13-QEeCx04HGvj8drw" computed="true" length="23">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B1n-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5sH2H-QEeCx04HGvj8drw" computed="true" length="23">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B13-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5sH03-QEeCx04HGvj8drw" computed="true" length="12">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B2H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5sH1H-QEeCx04HGvj8drw" computed="true" length="12">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4B2X-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5sH1X-QEeCx04HGvj8drw" computed="true" length="12">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9IwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz4o4H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column1`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5sH33-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P8n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5sH4H-QEeCx04HGvj8drw" computed="true" length="28">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P83-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5sH4X-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P9H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5sH6H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P9X-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5sH6X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz5P9n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5sH6n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5662.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53AH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column2`)), COUNT(`Column2`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5sH5X-QEeCx04HGvj8drw" computed="true" length="28">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53AX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5sH5n-QEeCx04HGvj8drw" computed="true" length="28">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53An-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5sH53-QEeCx04HGvj8drw" computed="true" length="28">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53A3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5sH4n-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53BH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5sH43-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53BX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5sH5H-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9JwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz53Bn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column2`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5sH7n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eEX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5sH73-QEeCx04HGvj8drw" computed="true" length="5">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eEn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5sH8H-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eE3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5sH93-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz6eFH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5sH-H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FIH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5sH-X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="1581.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FIX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column3`)), COUNT(`Column3`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5sH9H-QEeCx04HGvj8drw" computed="true" length="5">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FIn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5sH9X-QEeCx04HGvj8drw" computed="true" length="5">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FI3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5sH9n-QEeCx04HGvj8drw" computed="true" length="5">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5sH8X-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5sH8n-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5sH83-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9KwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz7FJ3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column3`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5sH_X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5sH_n-QEeCx04HGvj8drw" computed="true" length="25">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5sH_3-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5sIBn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TQ3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5sIB3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TRH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5sICH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="2788.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TRX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column4`)), COUNT(`Column4`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5sIA3-QEeCx04HGvj8drw" computed="true" length="25">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TRn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5sIBH-QEeCx04HGvj8drw" computed="true" length="25">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TR3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5sIBX-QEeCx04HGvj8drw" computed="true" length="25">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TSH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5sIAH-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TSX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5sIAX-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TSn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5sIAn-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9LwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz8TS3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column4`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5sIDH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hYH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5su0H-QEeCx04HGvj8drw" computed="true" length="11">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hYX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5su0X-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hYn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5su2H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hY3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5su2X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5su2n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3486.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column5`)), COUNT(`Column5`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5su1X-QEeCx04HGvj8drw" computed="true" length="11">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5su1n-QEeCx04HGvj8drw" computed="true" length="11">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9hZ3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5su13-QEeCx04HGvj8drw" computed="true" length="11">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9haH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5su0n-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9haX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5su03-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9han-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5su1H-QEeCx04HGvj8drw" computed="true" length="8">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9MwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz9ha3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column5`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5su3n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vgn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5su33-QEeCx04HGvj8drw" computed="true" length="21">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vg3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5su4H-QEeCx04HGvj8drw" computed="true" length="6">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vhH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5su53-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz-vhX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5su6H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_WkH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5su6X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="5167.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_WkX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column6`)), COUNT(`Column6`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5su5H-QEeCx04HGvj8drw" computed="true" length="21">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_Wkn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5su5X-QEeCx04HGvj8drw" computed="true" length="21">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Zz_Wk3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5su5n-QEeCx04HGvj8drw" computed="true" length="21">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0By0H-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5su4X-QEeCx04HGvj8drw" computed="true" length="6">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0CZ4H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5su4n-QEeCx04HGvj8drw" computed="true" length="6">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0CZ4X-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5su43-QEeCx04HGvj8drw" computed="true" length="6">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9NwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0CZ4n-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column6`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5su7X-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA8n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5su7n-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA83-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5su73-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA9H-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5su9n-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA9X-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5su93-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA9n-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5su-H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="3180.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DA93-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column7`)), COUNT(`Column7`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5su83-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoAH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5su9H-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoAX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5su9X-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoAn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5su8H-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoA3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5su8X-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoBH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5su8n-QEeCx04HGvj8drw" computed="true" length="10">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9OwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0DoBX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column7`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5su_H-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPEn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5su_X-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPE3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5su_n-QEeCx04HGvj8drw" computed="true" length="1">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPFH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5svBX-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPFX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5svBn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPFn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5svB3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="321.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPF3-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column8`)), COUNT(`Column8`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5svAn-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPGH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5svA3-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0EPGX-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5svBH-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GEQH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5su_3-QEeCx04HGvj8drw" computed="true" length="1">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GrUH-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5svAH-QEeCx04HGvj8drw" computed="true" length="1">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GrUX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5svAX-QEeCx04HGvj8drw" computed="true" length="1">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9PwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0GrUn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column8`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AverageLengthIndicator" xmi:id="_N5svC3-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSYX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthIndicator" xmi:id="_N5svDH-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSYn-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthIndicator" xmi:id="_N5svDX-QEeCx04HGvj8drw" computed="true" length="2">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSY3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankIndicator" xmi:id="_N5svFH-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZH-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="_N5svFX-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZX-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:AvgLengthWithBlankNullIndicator" xmi:id="_N5svFn-QEeCx04HGvj8drw" count="318" computed="true" sumLength="637.0">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZn-QEeCx04HGvj8drw" body="SELECT SUM(CHAR_LENGTH(`Column9`)), COUNT(`Column9`) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankIndicator" xmi:id="_N5svEX-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSZ3-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithNullIndicator" xmi:id="_N5svEn-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0HSaH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MaxLengthWithBlankNullIndicator" xmi:id="_N5svE3-QEeCx04HGvj8drw" computed="true" length="3">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5cH-QEeCx04HGvj8drw" body="SELECT MAX(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankIndicator" xmi:id="_N5svDn-QEeCx04HGvj8drw" computed="true" length="2">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5cX-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithNullIndicator" xmi:id="_N5svD3-QEeCx04HGvj8drw" computed="true" length="2">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5cn-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MinLengthWithBlankNullIndicator" xmi:id="_N5svEH-QEeCx04HGvj8drw" computed="true" length="2">
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CIF_0.1.item#_74m9QwhnEeCYWb7D_hg3dw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Z0H5c3-QEeCx04HGvj8drw" body="SELECT MIN(CHAR_LENGTH(`Column9`)) FROM `cif`.`customer` " language="MySQL"/>
       </indicators>
     </results>
     <parameters xmi:id="_BVcmqQhIEeCLDvUH5rNdLg" dataFilter="_Bd9CpghIEeCLDvUH5rNdLg" analysisType="Multiple Column Analysis"/>

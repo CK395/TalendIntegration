@@ -16,7 +16,7 @@
   <taggedValue xmi:id="_IMOLk71-EeCx7d-tfT55CQ" tag="REP_DBINFO_PASSWORD" value=""/>
   <taggedValue xmi:id="_IMOLlL1-EeCx7d-tfT55CQ" tag="REP_DBINFO_DRIVER" value="org.hsqldb.jdbcDriver"/>
   <taggedValue xmi:id="_IMOLlb1-EeCx7d-tfT55CQ" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.HSQLDialect"/>
-  <taggedValue xmi:id="_IMOLlr1-EeCx7d-tfT55CQ" tag="REP_DBINFO_URL" value="jdbc:hsqldb:file:/null"/>
+  <taggedValue xmi:id="_IMOLlr1-EeCx7d-tfT55CQ" tag="REP_DBINFO_URL" value="jdbc:hsqldb:file:D:\Talend-Studio-20181026_1147-V7.1.1\workspace\TDQ_reporting_db\talend_dq"/>
   <taggedValue xmi:id="_IMOLl71-EeCx7d-tfT55CQ" tag="REP_DBINFO_HOST" value=""/>
   <taggedValue xmi:id="_IMOLmL1-EeCx7d-tfT55CQ" tag="REP_DBINFO_PORT" value=""/>
   <taggedValue xmi:id="_IMOLmb1-EeCx7d-tfT55CQ" tag="REP_DBINFO_SCHEMA" value=""/>
