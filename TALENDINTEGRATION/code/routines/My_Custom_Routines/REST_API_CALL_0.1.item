@@ -21,23 +21,23 @@ import org.json.JSONArray;
 import org.json.JSONTokener;
 import org.json.JSONException;
 public class REST_API_CALL {
-		static final String USERNAME     = "chandrakant@girikon.com";
+		
+    public static void ConnectionValues(){
+    	static final String USERNAME     = "chandrakant@girikon.com";
         static final String PASSWORD     = "seSaatw!1cw48pJoljzu1B2vpR8JorBAFw";
         static final String LOGINURL     = "https://login.salesforce.com";
         static final String GRANTSERVICE = "/services/oauth2/token?grant_type=password";
         static final String CLIENTID     = "3MVG9d8..z.hDcPKSXHs0a4gqhcDZ16h2_MLzcDbOM.pTFS.5sR1DuMETIVNE9ZmfE6uQ9dw2Lk53wX6LFxOw";
         static final String CLIENTSECRET = "2046326850912269715";
-    public static void ConnectionValues(){
-    	
-        private final String REST_ENDPOINT = "/services/data" ;
-        private static String API_VERSION = "/v44.0" ;
-        private static String baseUri;
-        private static Header oauthHeader;
-        private static Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
-        private static String AccountId ;
-        private static String AccountName;
-        //private static String leadLastName;
-        //private static String leadCompany;
+        public static String REST_ENDPOINT = "/services/data" ;
+        public static String API_VERSION = "/v44.0" ;
+        public static String baseUri;
+        public static Header oauthHeader;
+        public static Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
+        public static String AccountId ;
+        public static String AccountName;
+        //public static String leadLastName;
+        //public static String leadCompany;
         HttpClient httpclient = HttpClientBuilder.create().build();
         
         // Assemble the login request URL
