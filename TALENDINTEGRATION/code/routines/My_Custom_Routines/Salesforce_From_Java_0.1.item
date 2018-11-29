@@ -1,4 +1,11 @@
 package routines;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 /*
  * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
@@ -38,4 +45,50 @@ public class Salesforce_From_Java {
         }
         System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
     }
-}
+  
+    
+
+    	// http://localhost:8080/RESTfulExample/json/product/get
+    
+    	 public static String RestServices() {
+    		 String output=null;
+    	  try {
+
+    		URL url = new URL("http://services.groupkt.com/country/get/all");
+    		System.out.println(url);
+    		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+    		conn.setRequestMethod("GET");
+    		conn.setRequestProperty("Accept", "application/json");
+
+    		if (conn.getResponseCode() != 200) {
+    			throw new RuntimeException("Failed : HTTP error code : "
+    					+ conn.getResponseCode());
+    		}
+
+    		BufferedReader br = new BufferedReader(new InputStreamReader(
+    			(conn.getInputStream())));
+
+    		
+    		System.out.println("Output from Server .... \n");
+    		while ((output = br.readLine()) != null) {
+    			System.out.println(output);
+    		
+    			
+    		}
+            
+    		conn.disconnect();
+    		
+    	  } catch (MalformedURLException e) {
+
+    		e.printStackTrace();
+
+    	  } catch (IOException e) {
+
+    		e.printStackTrace();
+
+    	  }
+    	  return "Task Finished";
+
+    	}
+
+    }
