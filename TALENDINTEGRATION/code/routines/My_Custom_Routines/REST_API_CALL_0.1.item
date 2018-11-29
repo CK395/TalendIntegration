@@ -29,7 +29,7 @@ public class REST_API_CALL {
         static final String CLIENTSECRET = "2046326850912269715";
     public static void ConnectionValues(){
     	
-        private static final String REST_ENDPOINT = "/services/data" ;
+        private final String REST_ENDPOINT = "/services/data" ;
         private static String API_VERSION = "/v44.0" ;
         private static String baseUri;
         private static Header oauthHeader;
