@@ -1,41 +1,178 @@
 package routines;
 
-/*
- * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
- * it must be before the "{talendTypes}" key.
- * 
- * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
- * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
- * Short
- * 
- * 3. {Category} define a category for the Function. it is required. its value is user-defined .
- * 
- * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
- * 
- * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
- * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
- * added. you can have many parameters for the Function.
- * 
- * 5. {example} gives a example for the Function. it is optional.
- */
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader; 
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+//import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+//import org.apache.http.entity.StringEntity;
+import org.apache.http.message.BasicHeader;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.HttpStatus;
+import org.apache.http.util.EntityUtils;
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONObject;
+//import org.json.JSONArray;
+import org.json.JSONTokener;
+import org.json.JSONException;
 public class TestingRoutine {
-
-    /**
-     * helloExample: not return value, only print "hello" + message.
-     * 
-     * 
-     * {talendTypes} String
-     * 
-     * {Category} User Defined
-     * 
-     * {param} string("world") input: The string need to be printed.
-     * 
-     * {example} helloExemple("world") # hello world !.
-     */
-    public static void helloExample(String message) {
-        if (message == null) {
-            message = "World"; //$NON-NLS-1$
+		
+    public static String ConnectionValues(){
+			final String USERNAME     = "chandrakant@girikon.com";
+			final String PASSWORD     = "seSaatw!1cw48pJoljzu1B2vpR8JorBAFw";
+			final String LOGINURL     = "https://login.salesforce.com";
+			final String GRANTSERVICE = "/services/oauth2/token?grant_type=password";
+			final String CLIENTID     = "3MVG9d8..z.hDcPKSXHs0a4gqhcDZ16h2_MLzcDbOM.pTFS.5sR1DuMETIVNE9ZmfE6uQ9dw2Lk53wX6LFxOw";
+			final String CLIENTSECRET = "2046326850912269715";
+			final String REST_ENDPOINT = "/services/data" ;
+			final String API_VERSION = "/v44.0" ;
+			final String baseUri;
+			final Header oauthHeader;
+			//final Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
+			//final String AccountId ;
+			//final String AccountName;
+        HttpClient httpclient = HttpClientBuilder.create().build();
+        
+        // Assemble the login request URL
+        String loginURL = LOGINURL +
+                          GRANTSERVICE +
+                          "&client_id=" + CLIENTID +
+                          "&client_secret=" + CLIENTSECRET +
+                          "&username=" + USERNAME +
+                          "&password=" + PASSWORD;
+ 
+        // Login requests must be POSTs
+        HttpPost httpPost = new HttpPost(loginURL);
+        HttpResponse response = null;
+ 
+        try {
+            // Execute the login POST request
+            response = httpclient.execute(httpPost);
+        } catch (ClientProtocolException cpException) {
+            cpException.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
-        System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
+ 
+        // verify response is HTTP OK
+        final int statusCode = response.getStatusLine().getStatusCode();
+        if (statusCode != HttpStatus.SC_OK) {
+            //System.out.println("Error authenticating to Force.com: "+statusCode);
+            // Error is in EntityUtils.toString(response.getEntity())
+            return "Error authenticating to Force.com: "+statusCode;
+        }
+ 
+        String getResult = null;
+        try {
+            getResult = EntityUtils.toString(response.getEntity());
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+ 
+        JSONObject jsonObject = null;
+        String loginAccessToken = null;
+        String loginInstanceUrl = null;
+ 
+        try {
+            jsonObject = (JSONObject) new JSONTokener(getResult).nextValue();
+            loginAccessToken = jsonObject.getString("access_token");
+            loginInstanceUrl = jsonObject.getString("instance_url");
+        } catch (JSONException jsonException) {
+            jsonException.printStackTrace();
+        }
+ 
+        baseUri = loginInstanceUrl + REST_ENDPOINT + API_VERSION ;
+        oauthHeader = new BasicHeader("Authorization", "OAuth " + loginAccessToken) ;
+        System.out.println("oauthHeader1: " + oauthHeader);
+        //System.out.println("\n" + response.getStatusLine());
+        //System.out.println("Successful login");
+        //System.out.println("instance URL: "+loginInstanceUrl);
+        //System.out.println("access token/session ID: "+loginAccessToken);
+        //System.out.println("baseUri: "+ baseUri);        
+ 
+        // Run codes to query records in Salesforce using REST API
+        String result=queryAccount(baseUri,loginAccessToken);
+        httpPost.releaseConnection();
+        return result;
+        
+    }
+    
+    public static String queryAccount(String baseUri,String loginAccessToken) {
+        //System.out.println("\n_______________ Account QUERY _______________");
+        try {
+            //Set up the HTTP objects needed to make the request.
+            HttpClient httpClient = HttpClientBuilder.create().build();
+            String uri = baseUri + "/query?q=Select+Id+,+Name+From+Account";
+            Header oauthHeader = new BasicHeader("Authorization", "OAuth " + loginAccessToken) ;
+            Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
+            //System.out.println("Query URL: " + uri);
+            HttpGet httpGet = new HttpGet(uri);
+            //System.out.println("oauthHeader2: " + oauthHeader);
+            httpGet.addHeader(oauthHeader);
+            httpGet.addHeader(prettyPrintHeader);
+ 
+            // Make the request.
+            HttpResponse response = httpClient.execute(httpGet);
+ 
+            // Process the result
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode == 200) {
+            	//String AccountId;
+            	//String AccountName;
+                String response_string = EntityUtils.toString(response.getEntity());
+                return response_string;
+            
+                /*
+                 * try {
+                    JSONObject json = new JSONObject(response_string);
+                    //System.out.println("JSON result of Query:\n" + json.toString(1));
+                    JSONArray j = json.getJSONArray("records");
+                    for (int i = 0; i < j.length(); i++){
+                        AccountId = json.getJSONArray("records").getJSONObject(i).getString("Id");
+                        AccountName = json.getJSONArray("records").getJSONObject(i).getString("Name");
+                        //System.out.println("Account record is: " + i + ". " + AccountId + " " + AccountName);
+                    }
+                } catch (JSONException je) {
+                    je.printStackTrace();
+                }
+                */
+            } else {
+            	String Error_message="Query was unsuccessful. Status code returned is " + statusCode;
+                //System.out.println("Query was unsuccessful. Status code returned is " + statusCode);
+                //System.out.println("An error has occured. Http status: " + response.getStatusLine().getStatusCode());
+                //System.out.println(getBody(response.getEntity().getContent()));
+                System.exit(-1);
+                return Error_message;
+                
+            }
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+            return "IOException";
+        } catch (NullPointerException npe) {
+            npe.printStackTrace();
+            return "NLPException";
+        }
+    }
+    private static String getBody(InputStream inputStream) {
+        String result = "";
+        try {
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(inputStream)
+            );
+            String inputLine;
+            while ( (inputLine = in.readLine() ) != null ) {
+                result += inputLine;
+                result += "\n";
+            }
+            in.close();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        return result;
     }
 }
