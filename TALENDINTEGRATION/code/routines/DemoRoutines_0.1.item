@@ -9,7 +9,7 @@ public class DemoRoutines {
      * {talendTypes} String
 	 *
      * */	    	
-    public static void helloExemple(String message) {
+    public static void helloExample(String message) {
         if (message == null) {
             message = "World";
         }
