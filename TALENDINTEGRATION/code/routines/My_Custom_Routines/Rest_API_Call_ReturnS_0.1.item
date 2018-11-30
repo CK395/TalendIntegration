@@ -107,7 +107,7 @@ public class Rest_API_Call_ReturnS {
         try {
             //Set up the HTTP objects needed to make the request.
             HttpClient httpClient = HttpClientBuilder.create().build();
-            String uri = baseUri + "/query?q=Select+Id+,+Name+From+Account+Limit+5";
+            String uri = baseUri + "/query?q=Select+Id+,+Name+From+Account";
             Header oauthHeader = new BasicHeader("Authorization", "OAuth " + loginAccessToken) ;
             Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
             //System.out.println("Query URL: " + uri);
