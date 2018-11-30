@@ -23,7 +23,7 @@ import org.json.JSONException;
 public class REST_API_CALL {
 		
     public static void ConnectionValues(){
-		final String USERNAME     = "chandrakant@girikon.com";
+			final String USERNAME     = "chandrakant@girikon.com";
 			final String PASSWORD     = "seSaatw!1cw48pJoljzu1B2vpR8JorBAFw";
 			final String LOGINURL     = "https://login.salesforce.com";
 			final String GRANTSERVICE = "/services/oauth2/token?grant_type=password";
