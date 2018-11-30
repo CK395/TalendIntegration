@@ -22,13 +22,17 @@ import org.json.JSONTokener;
 import org.json.JSONException;
 public class Rest_API_Call_ReturnS {
 		
-    public static String ConnectionValues(){
-			final String USERNAME     = "chandrakant@girikon.com";
-			final String PASSWORD     = "seSaatw!1cw48pJoljzu1B2vpR8JorBAFw";
+    public static String ConnectionValues(String username,String password,String token,String client_id,String client_secret){
+			//final String USERNAME     = "chandrakant@girikon.com";
+    		final String USERNAME     = username;
+			//final String PASSWORD     = "seSaatw!1cw48pJoljzu1B2vpR8JorBAFw";
+			final String PASSWORD     = password+token;
 			final String LOGINURL     = "https://login.salesforce.com";
 			final String GRANTSERVICE = "/services/oauth2/token?grant_type=password";
-			final String CLIENTID     = "3MVG9d8..z.hDcPKSXHs0a4gqhcDZ16h2_MLzcDbOM.pTFS.5sR1DuMETIVNE9ZmfE6uQ9dw2Lk53wX6LFxOw";
-			final String CLIENTSECRET = "2046326850912269715";
+			//final String CLIENTID = "3MVG9d8..z.hDcPKSXHs0a4gqhcDZ16h2_MLzcDbOM.pTFS.5sR1DuMETIVNE9ZmfE6uQ9dw2Lk53wX6LFxOw";
+			final String CLIENTID = client_id;
+			//final String CLIENTSECRET = "2046326850912269715";
+			final String CLIENTSECRET =client_secret;
 			final String REST_ENDPOINT = "/services/data" ;
 			final String API_VERSION = "/v44.0" ;
 			final String baseUri;
