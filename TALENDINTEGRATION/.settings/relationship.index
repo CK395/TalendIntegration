@@ -6197,6 +6197,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "REST_API_CALL",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "Relational",
     "version" : "Latest",
     "type" : "routine"
