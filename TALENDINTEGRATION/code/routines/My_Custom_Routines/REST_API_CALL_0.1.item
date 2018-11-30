@@ -98,7 +98,7 @@ public class REST_API_CALL {
         System.out.println("baseUri: "+ baseUri);        
  
         // Run codes to query, isnert, update and delete records in Salesforce using REST API
-        queryAccount();
+        queryAccount(baseUri);
         //createLeads();
         //updateLeads();
         //deleteLeads();        
@@ -107,7 +107,7 @@ public class REST_API_CALL {
         httpPost.releaseConnection();
     }
     
-    public static void queryAccount() {
+    public static void queryAccount(String baseUri) {
         System.out.println("\n_______________ Lead QUERY _______________");
         try {
  
