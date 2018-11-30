@@ -97,23 +97,17 @@ public class REST_API_CALL {
         System.out.println("access token/session ID: "+loginAccessToken);
         System.out.println("baseUri: "+ baseUri);        
  
-        // Run codes to query, isnert, update and delete records in Salesforce using REST API
-        queryAccount(baseUri);
-        //createLeads();
-        //updateLeads();
-        //deleteLeads();        
- 
-        // release connection
+        // Run codes to query records in Salesforce using REST API
+        queryAccount(baseUri,oauthHeader);
         httpPost.releaseConnection();
     }
     
-    public static void queryAccount(String baseUri) {
-        System.out.println("\n_______________ Lead QUERY _______________");
+    public static void queryAccount(String baseUri,String oauthHeader) {
+        System.out.println("\n_______________ Account QUERY _______________");
         try {
  
             //Set up the HTTP objects needed to make the request.
             HttpClient httpClient = HttpClientBuilder.create().build();
- 
             String uri = baseUri + "/query?q=Select+Id+,+Name+From+Account+Limit+5";
             System.out.println("Query URL: " + uri);
             HttpGet httpGet = new HttpGet(uri);
