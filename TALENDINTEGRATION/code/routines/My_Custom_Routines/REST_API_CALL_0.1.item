@@ -33,9 +33,9 @@ public class REST_API_CALL {
 			final String API_VERSION = "/v44.0" ;
 			final String baseUri;
 			final Header oauthHeader;
-			final Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
-			final String AccountId ;
-			final String AccountName;
+			//final Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
+			//final String AccountId ;
+			//final String AccountName;
         //public static String leadLastName;
         //public static String leadCompany;
         HttpClient httpclient = HttpClientBuilder.create().build();
