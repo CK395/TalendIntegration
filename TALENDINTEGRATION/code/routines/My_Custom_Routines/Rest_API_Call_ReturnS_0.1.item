@@ -64,7 +64,7 @@ public class Rest_API_Call_ReturnS {
         if (statusCode != HttpStatus.SC_OK) {
             System.out.println("Error authenticating to Force.com: "+statusCode);
             // Error is in EntityUtils.toString(response.getEntity())
-            return;
+            return "Error authenticating to Force.com: "+statusCode;
         }
  
         String getResult = null;
