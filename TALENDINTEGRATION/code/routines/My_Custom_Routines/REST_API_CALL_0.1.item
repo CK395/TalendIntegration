@@ -123,6 +123,8 @@ public class REST_API_CALL {
             // Process the result
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode == 200) {
+            	String AccountId;
+            	String AccountName;
                 String response_string = EntityUtils.toString(response.getEntity());
                 try {
                     JSONObject json = new JSONObject(response_string);
