@@ -98,17 +98,19 @@ public class REST_API_CALL {
         System.out.println("baseUri: "+ baseUri);        
  
         // Run codes to query records in Salesforce using REST API
-        queryAccount(baseUri,oauthHeader);
+        queryAccount(baseUri,loginAccessToken);
         httpPost.releaseConnection();
     }
     
-    public static void queryAccount(String baseUri,String oauthHeader) {
+    public static void queryAccount(String baseUri,String loginAccessToken) {
         System.out.println("\n_______________ Account QUERY _______________");
         try {
  
             //Set up the HTTP objects needed to make the request.
             HttpClient httpClient = HttpClientBuilder.create().build();
             String uri = baseUri + "/query?q=Select+Id+,+Name+From+Account+Limit+5";
+            Header oauthHeader = new BasicHeader("Authorization", "OAuth " + loginAccessToken) ;
+            Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
             System.out.println("Query URL: " + uri);
             HttpGet httpGet = new HttpGet(uri);
             System.out.println("oauthHeader2: " + oauthHeader);
