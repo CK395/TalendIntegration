@@ -96,14 +96,15 @@ public class Rest_API_Call_ReturnS {
         System.out.println("baseUri: "+ baseUri);        
  
         // Run codes to query records in Salesforce using REST API
-        queryAccount(baseUri,loginAccessToken);
+        String result=queryAccount(baseUri,loginAccessToken);
         httpPost.releaseConnection();
+        return result;
+        
     }
     
     public static String queryAccount(String baseUri,String loginAccessToken) {
         System.out.println("\n_______________ Account QUERY _______________");
         try {
- 
             //Set up the HTTP objects needed to make the request.
             HttpClient httpClient = HttpClientBuilder.create().build();
             String uri = baseUri + "/query?q=Select+Id+,+Name+From+Account+Limit+5";
@@ -145,13 +146,16 @@ public class Rest_API_Call_ReturnS {
                 System.out.println("Query was unsuccessful. Status code returned is " + statusCode);
                 System.out.println("An error has occured. Http status: " + response.getStatusLine().getStatusCode());
                 System.out.println(getBody(response.getEntity().getContent()));
-                return Error_message;
                 System.exit(-1);
+                return Error_message;
+                
             }
         } catch (IOException ioe) {
             ioe.printStackTrace();
+            return "IOException";
         } catch (NullPointerException npe) {
             npe.printStackTrace();
+            return "NLPException";
         }
     }
     private static String getBody(InputStream inputStream) {
