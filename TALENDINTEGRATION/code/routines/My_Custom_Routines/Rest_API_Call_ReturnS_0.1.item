@@ -20,7 +20,7 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONTokener;
 import org.json.JSONException;
-public class REST_API_CALL_ReturnS {
+public class Rest_API_Call_ReturnS {
 		
     public static String ConnectionValues(){
 			final String USERNAME     = "chandrakant@girikon.com";
