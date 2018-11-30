@@ -7,17 +7,17 @@ import java.io.BufferedReader;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpDelete;
+//import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
+//import org.apache.http.entity.StringEntity;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.HttpStatus;
 import org.apache.http.util.EntityUtils;
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONObject;
-import org.json.JSONArray;
+//import org.json.JSONArray;
 import org.json.JSONTokener;
 import org.json.JSONException;
 public class Rest_API_Call_ReturnS_Copy {
@@ -88,7 +88,7 @@ public class Rest_API_Call_ReturnS_Copy {
  
         baseUri = loginInstanceUrl + REST_ENDPOINT + API_VERSION ;
         oauthHeader = new BasicHeader("Authorization", "OAuth " + loginAccessToken) ;
-        //System.out.println("oauthHeader1: " + oauthHeader);
+        System.out.println("oauthHeader1: " + oauthHeader);
         //System.out.println("\n" + response.getStatusLine());
         //System.out.println("Successful login");
         //System.out.println("instance URL: "+loginInstanceUrl);
@@ -122,8 +122,8 @@ public class Rest_API_Call_ReturnS_Copy {
             // Process the result
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode == 200) {
-            	String AccountId;
-            	String AccountName;
+            	//String AccountId;
+            	//String AccountName;
                 String response_string = EntityUtils.toString(response.getEntity());
                 return response_string;
             
