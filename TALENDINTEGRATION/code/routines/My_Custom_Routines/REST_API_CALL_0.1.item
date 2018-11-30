@@ -150,4 +150,21 @@ public class REST_API_CALL {
             npe.printStackTrace();
         }
     }
+    private static String getBody(InputStream inputStream) {
+        String result = "";
+        try {
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(inputStream)
+            );
+            String inputLine;
+            while ( (inputLine = in.readLine() ) != null ) {
+                result += inputLine;
+                result += "\n";
+            }
+            in.close();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        return result;
+    }
 }
