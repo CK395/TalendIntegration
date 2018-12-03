@@ -40,9 +40,6 @@ public class Rest_API_Call_ReturnS {
 			final String LOGINURL     = "https://login.salesforce.com";
 			*/
 			final String GRANTSERVICE = "/services/oauth2/token?grant_type=password";
-			
-			
-			//final String CLIENTSECRET =client_secret;
 			final String REST_ENDPOINT = "/services/data" ;
 			final String API_VERSION = "/v44.0" ;
 			final String baseUri;
