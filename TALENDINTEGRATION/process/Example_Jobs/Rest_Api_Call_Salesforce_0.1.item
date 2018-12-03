@@ -5,6 +5,7 @@
     <contextParameter comment="" name="client_id" prompt="client_id?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="client_secret" prompt="client_secret?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="token" prompt="token?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="login_url" prompt="login_url?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -120,7 +121,7 @@
   </parameters>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="0">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#9;&#9;&#9;&#9; String result=Rest_API_Call_ReturnS.ConnectionValues(context.username,context.password,context.token, context.client_id,context.client_secret);&#10;&#9;&#9;&#9;&#9; System.out.println(&quot;###########\n&quot;+result);&#10;&#9;&#9;&#9;&#9; final JSONObject obj = new JSONObject(result);&#10;&#9;&#9;&#9;&#9; final JSONArray accountrecords = obj.getJSONArray(&quot;records&quot;);&#10;&#9;&#9;&#9;&#9; File newFile = new File(&quot;C:/Users/Girikon/Desktop/AccountRecords.csv&quot;);&#10;&#9;&#9;&#9;&#9; if(!newFile.exists()){&#10;&#9;&#9;&#9;&#9;newFile.createNewFile();&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;BufferedWriter output = new BufferedWriter( new FileWriter(newFile));&#10;&#9;&#9;&#9;&#9;for(int i=0;i&lt;accountrecords.length();i++)&#10;&#9;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;final JSONObject record = accountrecords.getJSONObject(i);&#10;&#9;&#9;&#9;&#9;output.write(record.getString(&quot;Id&quot;));&#10;&#9;&#9;&#9;&#9;output.write(&quot;;&quot;);&#10;&#9;&#9;&#9;&#9;output.write(record.getString(&quot;Name&quot;));&#10;&#9;&#9;&#9;&#9;output.newLine();&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;output.close();"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#9;&#9;&#9;&#9; String result=Rest_API_Call_ReturnS.ConnectionValues(context.username,context.password,context.token, context.client_id,context.client_secret,context.login_url);&#10;&#9;&#9;&#9;&#9; System.out.println(&quot;###########\n&quot;+result);&#10;&#9;&#9;&#9;&#9; final JSONObject obj = new JSONObject(result);&#10;&#9;&#9;&#9;&#9; final JSONArray accountrecords = obj.getJSONArray(&quot;records&quot;);&#10;&#9;&#9;&#9;&#9; File newFile = new File(&quot;C:/Users/Girikon/Desktop/AccountRecords.csv&quot;);&#10;&#9;&#9;&#9;&#9; if(!newFile.exists()){&#10;&#9;&#9;&#9;&#9;newFile.createNewFile();&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;BufferedWriter output = new BufferedWriter( new FileWriter(newFile));&#10;&#9;&#9;&#9;&#9;for(int i=0;i&lt;accountrecords.length();i++)&#10;&#9;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;final JSONObject record = accountrecords.getJSONObject(i);&#10;&#9;&#9;&#9;&#9;output.write(record.getString(&quot;Id&quot;));&#10;&#9;&#9;&#9;&#9;output.write(&quot;;&quot;);&#10;&#9;&#9;&#9;&#9;output.write(record.getString(&quot;Name&quot;));&#10;&#9;&#9;&#9;&#9;output.newLine();&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;output.close();"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;&#10;import org.json.JSONArray;&#10;import org.json.JSONException;&#10;import org.json.JSONObject;&#10;//import java.util.List;&#10;import java.io.BufferedReader;&#10;import java.io.BufferedWriter;&#10;import java.io.File;&#10;import java.io.FileInputStream;&#10;import java.io.FileNotFoundException;&#10;import java.io.FileWriter;&#10;import java.io.IOException;&#10;import java.io.InputStreamReader;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
@@ -211,13 +212,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2774001d-d768-41b3-b825-85f0da6afa26"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>euuOk2e3KRXVnkKxY5debUYhEs3naElkrYf3+UNyTM7SDYfMTA8My05TB0F0KkfBZpvbxg6QKMs0
-GmZnTBxBbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1d27a1b9-4cf8-475f-98a2-49fb5538581c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KF8QJwTQ6QG8sE4k/HoRMSmvhm3vSmuf9J/3XGhwC8YIihhICEqwgRcJgPxlSTXvyJEV/S0kgpgk
-ZohrGa6Ykw==</DigestValue></Reference></SignedInfo><SignatureValue>EEBM323cKjU6Ak8VPKVDO91ard/4q9/oM17Gh5Dkl2Vhc+VKh7NES+WIGDIwqQy9Wmc7Z07Yb5qj
-GK6DVPUm7V8sVmHv9qsyUVSQmJWFYZyUE09N6KxTMBfk3RHz69p3+Q7xJrW9sDB2bDxZbTmfL8On
-liuKgtUBhrhpLzjwUd92B7p+izIgXF1cIx/ItEepkgXQ3kIrga1Mp6me1Vk9eAmByVtrODOgz8gG
-Za1EL++NR9OZq6phzYHXi8NVUFRufEcmtBOT5dsAPAFBTI6tjcIcKjNOCh2srt0wX+kCyCN5t6Kc
-usgnBxzygUCsSoxZkXc6dgTWDNYrH2XixggS3w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4d71477f-e020-446f-b810-4b6d5876c06f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+ETT2ynsQxpZV95bDFHjL/5QSXaLVkxtgVSbMW2lnHD+01Sx8rRXkXM4iDKJNmtpjdKdeyE2D8L6
+wb5Q6VoOKQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5a188268-8cfb-47f6-916c-7ba44cb6b3e2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h6Ch86dCS//dJ8bu1QlLnFc9h7lP9IoCC5q1Ao5Ggod0uqgH6O23bnDy41Mx1vBnhvj9cecXTQOZ
+caSuqJ621g==</DigestValue></Reference></SignedInfo><SignatureValue>eeSwGXMEOOcbd5eIi9sBq31Dr354uFNpODdx8VmKJ9xJ0PrQAS7ErhDdSLZadBgEcvT7adc+wcj6
+yDx9+pQCTScExkL8qNzlu27jQajBf1isGrDSWZqoAycNAoeoiKyhYWyokWJfZuifUlbd0mR5wrD+
+MX1eauLt5KBaieQycUj3GbHpdaScl3t9oXiqyH0bSP/32Sh0fGggGvCn0GaivzxHqYZ/VCI5n3Ei
+eVFYPR4UMg+aOtkcSUiIYSJgEE/0zRfjNqodvhKBf6xrunoDXZg7Iww0r9CFMTylyYdrh1KF62yK
+ES64gHG+eyQORYq07pmuHgbmamoEUndTtC+cTw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -241,4 +242,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1d27a1b9-4cf8-475f-98a2-49fb5538581c" Target="#_2774001d-d768-41b3-b825-85f0da6afa26"><Timestamp>2018-12-03 07:08:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5a188268-8cfb-47f6-916c-7ba44cb6b3e2" Target="#_4d71477f-e020-446f-b810-4b6d5876c06f"><Timestamp>2018-12-03 07:12:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
