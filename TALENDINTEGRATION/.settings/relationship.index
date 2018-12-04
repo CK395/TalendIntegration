@@ -9877,22 +9877,6 @@
     "version" : "Latest",
     "type" : "job"
   }, {
-    "id" : "_7mjIEPFnEeiTZMyCTDc1SQ",
-    "version" : "Latest",
-    "type" : "job"
-  }, {
-    "id" : "_QABpAPFwEeiTZMyCTDc1SQ",
-    "version" : "Latest",
-    "type" : "job"
-  }, {
-    "id" : "_S-KCUPPGEei117EZpq0GBw",
-    "version" : "Latest",
-    "type" : "job"
-  }, {
-    "id" : "_a18VwPGIEeiTZMyCTDc1SQ",
-    "version" : "Latest",
-    "type" : "job"
-  }, {
     "id" : "DQTechnical",
     "version" : "Latest",
     "type" : "routine"
