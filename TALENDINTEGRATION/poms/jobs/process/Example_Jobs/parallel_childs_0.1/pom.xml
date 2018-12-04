@@ -77,6 +77,26 @@
       <artifactId>Child_of_Parallel_Child</artifactId>
       <version>0.1.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.example.talendintegration.job</groupId>
+      <artifactId>tparallelise</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.talendintegration.job</groupId>
+      <artifactId>tPartitioner</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.talendintegration.job</groupId>
+      <artifactId>Joblet_Job</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.talendintegration.job</groupId>
+      <artifactId>Rest_Api_Call_Salesforce</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>${talend.job.finalName}</finalName>
