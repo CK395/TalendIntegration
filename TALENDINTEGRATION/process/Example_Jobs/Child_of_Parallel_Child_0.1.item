@@ -138,21 +138,24 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Continent"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CountryCode"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Region"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="District"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Code"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Population"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Name" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Continent" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Region" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Code" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CountryCode" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="District" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Population" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="160">
@@ -186,10 +189,11 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="ID" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Name" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Continent" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Region" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Code" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CountryCode" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="District" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Population" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
@@ -240,13 +244,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4a7844aa-683c-4f14-9e3f-76de5b23ffc4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zlNIIN1sEkp6tBwai+UFekFZt1wd3Dr3lmFPwebqJbWjuQ+51Fz0R/QQkuZVQDqAOZfiEfQ2tXAe
-bCY52HpF4Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34a15923-3251-408c-9367-f997b83ebb83"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0GXlwzSFydK8Q204RoZC4eZao2fqlxWMSAEgzLDqsEVmHaPGjD91+zyX+G9cUP+zgBXrBuDXXwtq
-7zGmK26y6g==</DigestValue></Reference></SignedInfo><SignatureValue>pNjEgpNXGNg7Q32YvuJjOamyQjqUBhICoKBGj+Q7JtIZ5dquReSKAMr2kod5fWy9f2rmA0E18Nyn
-bVem9eUCj+Zt4n0d9fAsDDOFO9P3vrLAbMplWxiwkkTwGRXx25ONJwPZ5q3BrnvkzLhwotTzePMu
-hlL39euTleIGexbSHRsYnveAy/0hUS1EUK1t5O3YEO/spX3D9RqTtKN5G++bRBCiE6rgJeazLvZo
-iX6UXe/VnzybeMR2Ot7HQ8hP015L6kxETzx+e2WUNCPUFjPyc21uTBHYWtSCmFqHCD61ICqYKwFq
-VuScomE/VHkD7RmIZ5UPZnLXIS90SY/XNF1lTA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4fed885a-a93d-4c73-853c-96a2997aa7c1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RxL9OEbisUaHfSl7R02fx3PM2TPCCrJfkgYQQa1R5Kj8brIDf82zODInDe2bhRbV5Qa9FggX7Z8a
+b0YwsQ2ERw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b65e42ad-4196-4d7d-8811-aa23e040c93a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KlFaJ15lQvTcdywfMeb7DSgIoAZIim5alzdCNPMPClp0J2v/8saGQZzQQzWQfhAfoaV+qVYHCJ7O
+CQlj0TY9TQ==</DigestValue></Reference></SignedInfo><SignatureValue>dFxexln8V7G4+6wLf5CKPZvvaFUTa1PHhSZtw1T82MD3O4si/ImEQ2idgBSturjSVuTkhToDeyWi
+Gd+Y8pGuiS4JoOZv73nI3GJvmkK5D3rpGPyoLghXwPnhdMKNi5J6HgDzg8u6VFckYRLpIa2tyC23
+/dE6KMqF5dhBsbqftJW42cjPmqDdKfhqHBpzgub6dREd//ZQaL1L0NijyZD94zjruWFxuLpAl+OI
++CQtt9zqxYZzS+Oy/jTjjiYnt8s7FmYJmaRcHblMcsupSmRarhNj0hqdE/hc7qOGhj3vj9caEjLK
+lq7vDciMvVqJdlS7X6hmlcWJi3oF6LijWn3hcQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -270,4 +274,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34a15923-3251-408c-9367-f997b83ebb83" Target="#_4a7844aa-683c-4f14-9e3f-76de5b23ffc4"><Timestamp>2018-12-04 06:59:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b65e42ad-4196-4d7d-8811-aa23e040c93a" Target="#_4fed885a-a93d-4c73-853c-96a2997aa7c1"><Timestamp>2018-12-04 07:00:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
