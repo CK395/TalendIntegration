@@ -77,6 +77,11 @@
       <artifactId>routines</artifactId>
       <version>7.1.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.example.talendintegration.job</groupId>
+      <artifactId>Child_of_Parallel_Child</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>${talend.job.finalName}</finalName>
