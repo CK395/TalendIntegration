@@ -2,7 +2,7 @@
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="64"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -166,18 +166,32 @@
       <column comment="" key="false" length="-1" name="BirthDate" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_1"/>
-    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      globalMap.put(&quot;Mail&quot;,&quot;&quot;);&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append(&quot;Birthdays---------------&quot;);"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;Date today=new Date();&#10;&#9;System.out.println(today);&#10;&#9;Date birthdate;&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#9;if(TalendDate.isDate(row2.BirthDate,&quot;dd/MM/yyyy&quot;))&#10;&#9;{&#10;&#9;birthdate=new SimpleDateFormat(&quot;dd/MM/yyyy&quot;).parse(row2.BirthDate);&#10;&#9;bd.setTime(birthdate);&#10;&#9;}&#10;&#9;else if(TalendDate.isDate(row2.BirthDate,&quot;yyyy/MM/dd&quot;)){&#10;&#9;birthdate=new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(row2.BirthDate);&#10;&#9;bd.setTime(birthdate);&#10;&#9;}&#10;&#9;System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=7;i++){&#10;&#9;td.add(Calendar.DATE,i);&#10;&#9;System.out.println(&quot;Iteration&quot;+i+&quot;====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay){&#10;&#9;&#9;sb.append(row2.EmpCode);&#10;&#9;&#9;sb.append(&quot;   &quot;);&#10;&#9;&#9;sb.append(td.getTime());&#10;&#9;&#9;sb.append('\n');&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;}"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$&quot;+(String)globalMap.get(&quot;Mail&quot;));"/>
-    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
-    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
-    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;&#10;import java.text.SimpleDateFormat;  &#10;import java.util.Date;&#10;import java.text.DateFormat;&#10;import java.util.Calendar;"/>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_4"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="EmpCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BirthDate"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaFlex_1"/>
+    <metadata connector="FLOW" name="tLogRow_4">
+      <column comment="" key="false" length="-1" name="EmpCode" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BirthDate" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
   </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_2"/>
@@ -414,11 +428,25 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      globalMap.put(&quot;Mail&quot;,&quot;&quot;);&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append(&quot;Birthdays---------------&quot;);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;Date today=new Date();&#10;&#9;System.out.println(today);&#10;&#9;Date birthdate;&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#9;if(TalendDate.isDate(row2.BirthDate,&quot;dd/MM/yyyy&quot;))&#10;&#9;{&#10;&#9;birthdate=new SimpleDateFormat(&quot;dd/MM/yyyy&quot;).parse(row2.BirthDate);&#10;&#9;bd.setTime(birthdate);&#10;&#9;}&#10;&#9;else if(TalendDate.isDate(row2.BirthDate,&quot;yyyy/MM/dd&quot;)){&#10;&#9;birthdate=new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(row2.BirthDate);&#10;&#9;bd.setTime(birthdate);&#10;&#9;}&#10;&#9;System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=7;i++){&#10;&#9;td.add(Calendar.DATE,i);&#10;&#9;System.out.println(&quot;Iteration&quot;+i+&quot;====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay){&#10;&#9;&#9;sb.append(row2.EmpCode);&#10;&#9;&#9;sb.append(&quot;   &quot;);&#10;&#9;&#9;sb.append(td.getTime());&#10;&#9;&#9;sb.append('\n');&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;}"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$&quot;+(String)globalMap.get(&quot;Mail&quot;));"/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;&#10;import java.text.SimpleDateFormat;  &#10;import java.util.Date;&#10;import java.text.DateFormat;&#10;import java.util.Calendar;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_1"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tExtractDynamicFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractDynamicFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractDynamicFields_1" target="tJavaFlex_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractDynamicFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractDynamicFields_1" target="tLogRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
@@ -485,13 +513,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_347e3aaf-b9e5-425e-b2e2-4da68228d0b6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XcAwVlKGeDPWkv+Le0mRGaBJmUjq85gS3fLvgFxgZ6QDpf+woTgQkRw8tRtRjECqQs8SRfpVfL8c
-Hrr4Owy58Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2e2e2b80-f829-4afe-9ce2-218f336aced6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YclVCJs4SQ2aNysEnIqeGyn1w80R1Xpy6Xyiw7O+OAR7PmzAtbt79SHsh/DoMP2tg4phh9rEtru7
-JyDjVOhjPA==</DigestValue></Reference></SignedInfo><SignatureValue>wa2qOVq4e6BPRowk4PP5ikKu9rJIzZReoTmmRBIJw2S/ClHO0ObmoSq9+FWfsh5OIVrU+pRChGpM
-OH2kUQk0+r8NmfexGCkCt0DYDbac846SAC/fWbhqTv8Yhlr7a7dhKvt/4NZ8jmHjiwuXSyqhkUTR
-4QW+5pGRhgDgSSfrCHlhPo0SCqw93hJYrvQASMu1Uw1qAehKvMdRxKvm48oyWcVuUd4VJ86rtz7T
-LNTTdC9fYr9Ph/cSufgnEvuG9R5On7gCYvyMqZory+hokmkFexQ321qp+6kQh8rOCGf3kaJZYCJ0
-s1wmo2Rz7uhftljOxIPaMwOV74dzlpnXi3EKfQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e9c9cf8d-6287-445f-9814-be38ffe1393c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Z0txMHslaV0ZxDIPWCTn/h6IYXHfzzRq3RxZw9r8U0gAxwFm8+muBlSk5ptv2G23QKTBGgBm286k
+dEtV2IAYSw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d1901a44-14e6-485e-9ddd-009002f2024f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cpa/0DxcgD5ynOpHl88HnYdP/SCCOz4Gey49SgvEm3YW658r11GmzhFbDVZqxK/zNA7ARLtx+eoj
+x/gEEzCXnA==</DigestValue></Reference></SignedInfo><SignatureValue>Q7DTkWiDolFGVddH1rNv2xlgabFSQSDMhLHAyWVffBVoVLMV1vTCAU2l1EjJ5xhZjCiyuaWq1btf
+TOha0wlsG+fxHwSo3x9dvKOZBi3UAfQhSXkaR+DuZ1W5KvCC/3dgYvCtzgoBrhDYgLrKpmm0HgYk
+QeDQB+to6FLP3yu8GNauO+g0/nneAhFLzVNUqFR7xBa7bcyZWvVjZp9w5vukw791P3OKj5Nh7wTT
+KvQy/x9umoxXkO00h7NEFEI7YPPUoGiTx3Fvp/MVOQ66sk4TkA2kLffEikqlX5/DP2+T4HjVX9A1
+r+fIwfjChWF/QXdIH+e9NsPbSpYoOhwTC3XOXA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -515,4 +548,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2e2e2b80-f829-4afe-9ce2-218f336aced6" Target="#_347e3aaf-b9e5-425e-b2e2-4da68228d0b6"><Timestamp>2018-12-06 07:25:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d1901a44-14e6-485e-9ddd-009002f2024f" Target="#_e9c9cf8d-6287-445f-9814-be38ffe1393c"><Timestamp>2018-12-06 07:27:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
