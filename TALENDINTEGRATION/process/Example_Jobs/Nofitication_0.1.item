@@ -1004,7 +1004,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaFlex_1"/>
   </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="704">
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_2"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="row5.ManagerEmail"/>
@@ -1329,7 +1329,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="Last_Day" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="!Relational.ISNULL(  row1.Last_day__c )" name="Last_Day" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.Name " name="CandidateName" type="id_String"/>
         <mapperTableEntries expression="row1.Email " name="CandidateEmail" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.Name " name="ManagerName" nullable="true" type="id_String"/>
@@ -1858,7 +1858,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_2"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append((String)globalMap.get(&quot;Mail&quot;));&#10;      sb.append(&quot;Last Days---------------&quot;);&#10;      sb.append('\n');"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#10;&#9;Date today=new Date();&#10;&#9;System.out.println(today);&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#9;if(Last_Day.Last_day__c!=null){&#10;&#9;bd.setTime(Last_Day.Last_day__c);}&#10;&#9;//System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=7;i++)&#10;&#9;{&#10;&#9;td.add(Calendar.DATE,1);&#10;&#9;//System.out.println(&quot;Iteration:====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay)&#10;&#9;&#9;{&#10;&#9;&#9;sb.append(Last_Day.CandidateName);&#10;&#9;&#9;sb.append(&quot;   &quot;);&#10;&#9;&#9;//sb.append(td.getTime());&#10;&#9;&#9;sb.append(sdf.format(td.getTime()));&#10;&#9;&#9;sb.append('\n');&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;}&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#10;&#9;Date today=new Date();&#10;&#9;System.out.println(today);&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#10;&#9;bd.setTime(Last_Day.Last_day__c);&#10;&#9;//System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=7;i++)&#10;&#9;{&#10;&#9;td.add(Calendar.DATE,1);&#10;&#9;//System.out.println(&quot;Iteration:====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay)&#10;&#9;&#9;{&#10;&#9;&#9;sb.append(Last_Day.CandidateName);&#10;&#9;&#9;sb.append(&quot;   &quot;);&#10;&#9;&#9;//sb.append(td.getTime());&#10;&#9;&#9;sb.append(sdf.format(td.getTime()));&#10;&#9;&#9;sb.append('\n');&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;}&#10;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      sb.append('\n');&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      //System.out.println(&quot;$$$$$$$$$$$$$\n&quot;+(String)globalMap.get(&quot;Mail&quot;));&#10;      context.MailContent=(String)globalMap.get(&quot;Mail&quot;);"/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
@@ -2116,7 +2116,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="JoiningDate" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="!Relational.ISNULL(  row3.First_day__c )" name="JoiningDate" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.Name " name="CandidateName" type="id_String"/>
         <mapperTableEntries expression="row3.Email " name="CandidateEmail" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.Name " name="ManagerName" nullable="true" type="id_String"/>
@@ -2644,7 +2644,7 @@
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_3"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append((String)globalMap.get(&quot;Mail&quot;));&#10;      sb.append(&quot;Work Anniversary---------------&quot;);&#10;      sb.append('\n');"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append((String)globalMap.get(&quot;Mail&quot;));&#10;      sb.append(&quot;Work Anniversary--------&quot;);&#10;      sb.append('\n');"/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#10;&#9;Date today=new Date();&#10;&#9;System.out.println(today);&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#9;bd.setTime(JoiningDate.First_day__c);&#10;&#9;//System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=7;i++)&#10;&#9;{&#10;&#9;td.add(Calendar.DATE,1);&#10;&#9;//System.out.println(&quot;Iteration:====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay)&#10;&#9;&#9;{&#10;&#9;&#9;sb.append(JoiningDate.CandidateName);&#10;&#9;&#9;sb.append(&quot;   &quot;);&#10;&#9;&#9;//sb.append(td.getTime());&#10;&#9;&#9;sb.append(sdf.format(td.getTime()));&#10;&#9;&#9;sb.append('\n');&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;}&#10;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$\n&quot;+(String)globalMap.get(&quot;Mail&quot;));&#10;      context.MailContent=(String)globalMap.get(&quot;Mail&quot;);"/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
@@ -2653,6 +2653,36 @@
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;&#10;import java.text.SimpleDateFormat;  &#10;import java.util.Date;&#10;import java.text.DateFormat;&#10;import java.util.Calendar;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaFlex_3"/>
+  </node>
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_4"/>
+    <elementParameter field="TEXT" name="TO" value="&quot;abhishekh.shrivastav@girikon.com&quot;"/>
+    <elementParameter field="TEXT" name="FROM" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
+    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
+    <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
+    <elementParameter field="TEXT" name="CC" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
+    <elementParameter field="TEXT" name="BCC" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
+    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Talend Open Studio notification&quot;"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Hi Abhishekh Sir,&#13;&#10;This is just another trial&#13;&#10;&quot;+context.MailContent"/>
+    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
+    <elementParameter field="TABLE" name="ATTACHMENTS"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="&quot;smtp.gmail.com&quot;"/>
+    <elementParameter field="TEXT" name="SMTP_PORT" value="587"/>
+    <elementParameter field="CHECK" name="SSL" value="false"/>
+    <elementParameter field="CHECK" name="STARTTLS" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="WGOmpu2IF4B+id/FFrNv6A=="/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="plain"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
+    <elementParameter field="TEXT" name="LOCALHOST" show="false" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSendMail_4"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
@@ -2730,6 +2760,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaFlex_3" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_3" target="tSendMail_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk6"/>
+  </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
@@ -2786,13 +2819,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_49ef7471-6370-476a-afe9-358ca1c3c350"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9U8E7AULQTTDlB6DZDV4S5ZCrgE0kuCRlZ1oCn0BiNrG5EgGG5g2XIGgmisz0gn7n8gw6J2VJJGP
-MtYYnUbc+g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_38ced2a0-93bf-431d-9de2-3365cc0f9710"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uHsdCWia5Rd+pZfiQq9+kr4OJXQscjRL5YpkF4PkeQ6p7b7HhCCvH/CtoYF4QoVwvAqzAeDDrjGd
-+9fvGLUY3w==</DigestValue></Reference></SignedInfo><SignatureValue>rpyuDWJnX7HWsq7EB+nbwa9RWhrt+OjrUSYo1Bm1qYrxqpe9mWwn0deGz+y8UdbM9wmOAT+YJwed
-k6w9ZEeO+Cv25TZj+xsR6vuBCHTTukJLtJN9fimNpbbR2BM8AVffiuDeq3NDEvf/cdQQEaL7bH3i
-S+rttHnadzlwEQcw97CsXZwN4obdFI/+NhtBKXlLKBI3IP7F8NNnl94mXMcRSiMfJ7S+5Pt+kFc0
-D0Kue+cFvD+X0TbxY/D8T/tqdgqcnH4te1NQccyf+KEY38Jbjmul4tgErn81/8ZCWTc8QeGVALBl
-PsYsSC3vODIAe4kEX5X8o1d7EwwuihpXLGFj7g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_559fbd29-40e5-450c-a6b5-7cb7fb5c41b8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IgaN7dKPAuJNeNQfzt/HcunvOesOUNZOfKmnJ5Le0F/pktOCJN244s9sI7L94rvtGE6nzI2AzHp1
++f2mQ1NOnw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_170873c7-0502-4a2c-99da-9a2a4b5ecfaa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E+68k6J2IAC/oHo2641B70eJlbnc8AwfypOtxG0ZhareWbs2CQLDPULxYtGdn6i+SbtX7jVSJuHd
+kjqVUjzo7A==</DigestValue></Reference></SignedInfo><SignatureValue>PZwuxfc7oRr4eVyBupui/hA5A6P1G3QHHVN6YYnJnIGhADyqAktped/hci3VFXsnmVd9qLrwJpbE
+IXi/JTXNXtv0Q+QqqmcXsAZi/zl0N6hTsagZxjd7PUFTvKHo+iW4fjHUy4euH80BqDVewBKg9oXd
+751aIl3JBoY+HDxKV+mTqfEzh+Asg1RIwkSn9fpc287m/mqoM9p5UhvVC5AdnrXUgkpPng/d6DB6
+EiEHmQug8zp0L5R+rwgk/BbfIpkc7P2jnhvqXPC+Gwg15t/dOXxPsxDx8NpBdKfEkQ9g07SLu5Vp
+nRlyc9d6A7RZe2NaYld+FFwzW9tsb3K6nPrYqw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2816,4 +2854,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_38ced2a0-93bf-431d-9de2-3365cc0f9710" Target="#_49ef7471-6370-476a-afe9-358ca1c3c350"><Timestamp>2018-12-06 13:37:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_170873c7-0502-4a2c-99da-9a2a4b5ecfaa" Target="#_559fbd29-40e5-450c-a6b5-7cb7fb5c41b8"><Timestamp>2018-12-06 13:44:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
