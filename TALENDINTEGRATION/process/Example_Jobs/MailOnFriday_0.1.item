@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="MailContent" prompt="MailContent?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
@@ -171,7 +173,7 @@
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#10;      globalMap.put(&quot;Mail&quot;,&quot;&quot;);&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append(&quot;Birthdays---------------&quot;);&#10;      sb.append('\n');"/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#10;&#9;Date today=new Date();&#10;&#9;System.out.println(today);&#10;&#9;Date birthdate;&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#9;if(TalendDate.isDate(row2.BirthDate,&quot;dd/MM/yyyy&quot;))&#10;&#9;{&#10;&#9;birthdate=new SimpleDateFormat(&quot;dd/MM/yyyy&quot;).parse(row2.BirthDate);&#10;&#9;bd.setTime(birthdate);&#10;&#9;}&#10;&#9;else if(TalendDate.isDate(row2.BirthDate,&quot;yyyy/MM/dd&quot;)){&#10;&#9;birthdate=new SimpleDateFormat(&quot;yyyy/MM/dd&quot;).parse(row2.BirthDate);&#10;&#9;bd.setTime(birthdate);&#10;&#9;}&#10;&#9;System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=7;i++)&#10;&#9;{&#10;&#9;td.add(Calendar.DATE,1);&#10;&#9;System.out.println(&quot;Iteration:====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay)&#10;&#9;&#9;{&#10;&#9;&#9;sb.append(row2.EmpCode);&#10;&#9;&#9;sb.append(&quot;   &quot;);&#10;&#9;&#9;//sb.append(td.getTime());&#10;&#9;&#9;sb.append(sdf.format(td.getTime()));&#10;&#9;&#9;sb.append('\n');&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;}"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$\n&quot;+(String)globalMap.get(&quot;Mail&quot;));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$\n&quot;+(String)globalMap.get(&quot;Mail&quot;));&#10;      context.MailContent=(String)globalMap.get(&quot;Mail&quot;);"/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
@@ -463,7 +465,7 @@
     <elementParameter field="TEXT" name="CC" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
     <elementParameter field="TEXT" name="BCC" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
     <elementParameter field="TEXT" name="SUBJECT" value="&quot;Talend Open Studio notification&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Hi Abhishekh&quot;+&quot;\n&quot;+(String)globalMap.get(&quot;Mail&quot;)"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Hi Abhishekh Sir,&#13;&#10;This is just a trial&#13;&#10;&quot;+context.MailContent"/>
     <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
     <elementParameter field="TABLE" name="ATTACHMENTS"/>
     <elementParameter field="TABLE" name="HEADERS"/>
@@ -568,13 +570,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9947c4cc-a9ce-40e6-98da-db923b7f8973"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>39PmTA0r6iNB5n7tWgnfWPpMYtilRtHByccQaux1CIbqueK3Aor4DXV+NR82BHt5OYtotolbie7g
-/h7L2qKRVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e2632a78-8e9a-418a-ac95-a3c769d27cc9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gtqTr0oD3xXeq6ESHoUoR258Z+X9+zw/Up8UKSB1aIyWQ4H9mgRWKKNC+nq3+mtyflcy5q5aZAPe
-3ccD6V37oA==</DigestValue></Reference></SignedInfo><SignatureValue>S6e6dFSzlXrcVqhD9ejAZSQPbNfRqY6PY9QT6hY84gTUQCoZDASQBs5nnx/E9JP4R/q6aaKqs5K7
-Dih1r3vvnPz/ICJxD/SL6mYN04GpOmubtw7jlm4rH12paaJd/ve1uLFmHoI2qHCX95viGgMh1r0e
-gWjHd8sqnXSu33wU/CHJsVoBlNbKMPUrqVN9ULW5/FG5JOV00/sToP2DjNwadp3ClvZuCfM9wyHW
-WK7PKwojxgn7xqeThsoGGycqpfFsX56KYWF8/3f/vGz2US+ADVEsLSN56tL49us1ZMvzFDaTAA4C
-l6G9pu2JihcaSttMjlJwYh8TtDEMnOcRoGNT4w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7bcfd3e8-2846-4ee6-a4ff-aa4ac7642d36"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Xm40IiEe7jX3ibCSbmh8IOBmeRhMYtj8RxBvsWce2bkeIDZSvEpTpwUnqWDvt1ClXRRmSDS4O6o2
+GhQ1iAWKyw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_38552f94-3511-4ec0-b635-a1e2f09db0cb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>526x5sXn2PYEZnm6T+lSo7vNN5T0tp0AKRfTVXR0JNpaxwfCMxr1ajcpiecWgyPe/KHqji91Chzd
+j8jtxci7Dw==</DigestValue></Reference></SignedInfo><SignatureValue>l0amIXId9L7IHoH8JsHOUDZvKDTGtOUDcXhGihuaCBpM3cihqrfRaMciSj9pbZF+WlHvY5bqBvbh
+C20/ueXATBa6hyiWZ7TrAwQIAxGlmvvJN/9NkyJneDh2w4gC8Ne5xy+juC+W0NBCEi5nutp2nRQ4
+rlimbHd4ypgjXruYQmpk3FjoEPm5Yp9yJXXAoPyCblGn2tGHJ9vAnDdCafLL3KeusK6tqz5CByaU
+OsqdpKIc/PomwF1tXu0E1DJ8TEiAGUa9QFMSMmzWgt7sWnl+6V4Kmha3eA3xWl9tu0TM3wmFz7CU
++NC5wxR+x/ov3ipi+XGwCZX/Vopb9LV3jCLUAQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -598,4 +600,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e2632a78-8e9a-418a-ac95-a3c769d27cc9" Target="#_9947c4cc-a9ce-40e6-98da-db923b7f8973"><Timestamp>2018-12-06 08:35:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_38552f94-3511-4ec0-b635-a1e2f09db0cb" Target="#_7bcfd3e8-2846-4ee6-a4ff-aa4ac7642d36"><Timestamp>2018-12-06 09:04:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
