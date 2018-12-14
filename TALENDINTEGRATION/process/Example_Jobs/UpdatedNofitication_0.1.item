@@ -2645,7 +2645,7 @@
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="&#9;globalMap.put(&quot;Mail&quot;,&quot;&quot;);&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append(&quot;&lt;table border=\&quot;1px\&quot;&gt;&lt;caption&gt;Work Anniversary---------------&lt;/caption&gt;&quot;);&#10;      sb.append(&quot;&lt;tr&gt;&lt;th&gt;Candidate Name&lt;/th&gt;&quot;);&#10;      sb.append(&quot;&lt;th&gt;Date(Weekday)&lt;/th&gt;&quot;);&#10;      sb.append(&quot;&lt;th&gt; Manager Name&lt;/th&gt;&quot;);&#10;&#9;  sb.append(&quot;&lt;/tr&gt;&quot;);"/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#10;&#9;Date today=new Date();&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#9;bd.setTime(JoiningDate.First_day__c);&#10;&#9;//System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=17;i++)&#10;&#9;{&#10;&#9;td.add(Calendar.DATE,1);&#10;&#9;//System.out.println(&quot;Iteration:====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay)&#10;&#9;&#9;{&#10;&#9;&#9;check=true;&#10;&#9;&#9;sb.append(&quot;&lt;tr&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;td&gt;&quot;+JoiningDate.CandidateName+&quot;&lt;/td&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;td&gt;&quot;+sdf.format(td.getTime()));&#10;&#9;&#9;sb.append(&quot;(&quot;);&#10;&#9;&#9;Date temp=td.getTime();&#10;&#9;&#9;sdf = new SimpleDateFormat(&quot;EEEE&quot;);&#10;&#9;&#9;sb.append(sdf.format(temp));&#10;&#9;&#9;sb.append(&quot;)&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;/td&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;td&gt;&quot;+JoiningDate.ManagerName+&quot;&lt;/td&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;/tr&gt;&quot;);&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;}"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_END" value="      sb.append(&quot;&lt;/table&gt;&quot;);&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$\n&quot;+(String)globalMap.get(&quot;Mail&quot;));&#10;      if(check==true){&#10;      context.MailContent=context.MailContent+(String)globalMap.get(&quot;Mail&quot;);&#10;      }&#10;     else&#10;     context.MailContent=context.MailContent+&quot;&lt;br&gt;&lt;/br&gt;&lt;font color=\&quot;red\&quot;&gt;There are no last days in the coming week &lt;/font&gt;&quot;;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="      sb.append(&quot;&lt;/table&gt;&quot;);&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$\n&quot;+(String)globalMap.get(&quot;Mail&quot;));&#10;      if(check==true){&#10;      context.MailContent=context.MailContent+(String)globalMap.get(&quot;Mail&quot;);&#10;      }&#10;     else&#10;     context.MailContent=context.MailContent+&quot;&lt;br&gt;&lt;/br&gt;&lt;font color=\&quot;red\&quot;&gt;There are no Work Anniversaries in the coming week &lt;/font&gt;&quot;;"/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
@@ -2685,6 +2685,7 @@
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;chandrakant.baghel@girikon.com&quot;"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -2778,6 +2779,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="BirthDate"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaFlex_1" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_1" target="tSendMail_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk8"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tSalesforceInput_1">
@@ -2915,13 +2917,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="233;222;10"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_547d5866-6ef4-4762-9d7d-998d1d40d88f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rg2UIGCqxzBSTC1JqgSngSEvfnqlWUzc9Cchs/tww8z9BokRoTdOCWSXMDPxzJQxlMRwjdVpFqm0
-K9ET5H9Lsg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_081d7a11-0c3f-4dbc-9327-88688bff569d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oRg3CMF0n5I/q6/ce3xatQoS0vKo0yh2Cchraet8mzEdm7bSIYGm5npdrDY9BWe/2J+xzDmqMeSO
-9vqQl3R5BA==</DigestValue></Reference></SignedInfo><SignatureValue>UVoMjZkRkZQJ6YoDSc6CTGNu9xXmZBFpspQKo7ajr2RyXMyTH6T57TJlfjR69OBe82ngl+2yjp4n
-UVcNLQLWLyTRIp85BE02EiggNza+6Odhcj6PFWbThBCbBK9gCVVRCiJZBhbZe5J/u6QBLo2ZVsf7
-N1MexIhlo2rSytEjwiZnNf1iG/ogLAarZLS4U6Sq4pUQ65VN+ncHeWBtNiria0nNCVuOEzlbgqHI
-cVrMZcGK76W7odVBtkbFPf5n0f/UINvBzOdOAhXrSdril6nMP34xULAZbya8IllygtUkCO8JGIHL
-Zmo8Dz17fhAVnvRy8Jyakn/IgTYD4092lBn93A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_24a9f994-d71a-491d-8fff-5624afa5c281"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UYKtqOeHYWN6ocPOxZihK0cc4F0pZ2DsER8NgXiydn2ZinTOQA+cxRGMxUFFTkuBI+FVFCPwR+hg
+/2e1l0H7DA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d2117542-0edf-40f7-bdb7-2a5e908b1c35"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mMPxOXNk10yUmti/qqJEtZSHJcYkID/iEpIknzrwVoX+dFlLWyH1zJTq6F6pkwPXp46p3sjHs4vw
+iCM8fX5Gbg==</DigestValue></Reference></SignedInfo><SignatureValue>QQ97vmJYnqGFbdMFZr2KYRA0X0DKtmK3+f8VxyhTv2stVNHnzFAylqkie8v9sh5eXUl/hXNrSRnS
+9Q93S7OkPD0LcvCA8ETnG4H7DSe/K853NRPbSUFF3WVRGReffPNT9BOSA3YTyTZI2QwSutWefyon
+gVsvfx9rjR1BS3xEHwpKWaukWiVGuaUTaYaPfE/4u1CyE5t/WIPN8Dubv+S3WXIKuCrXsqXxx8tK
+D4ta5dlDMcIb332pwED4xagJA3Hy42MIy8mnc889+4g5I4+foMW3sabk94D2vS4xhniVCIch8Xz0
+5D/Uf8nWcMwBCmkfNF3YnXzmpDEnI9b7uR54Jg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2945,4 +2947,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_081d7a11-0c3f-4dbc-9327-88688bff569d" Target="#_547d5866-6ef4-4762-9d7d-998d1d40d88f"><Timestamp>2018-12-14 12:36:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d2117542-0edf-40f7-bdb7-2a5e908b1c35" Target="#_24a9f994-d71a-491d-8fff-5624afa5c281"><Timestamp>2018-12-14 12:39:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
