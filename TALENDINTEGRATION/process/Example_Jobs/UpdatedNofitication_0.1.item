@@ -1004,45 +1004,8 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaFlex_1"/>
   </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="352">
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_2"/>
-    <elementParameter field="TEXT" name="TO" value="row5.ManagerEmail"/>
-    <elementParameter field="TEXT" name="FROM" value="&quot;matti@incontext.se&quot;"/>
-    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="true"/>
-    <elementParameter field="TEXT" name="PERSONAL_NAME" value="&quot;Matti&quot;"/>
-    <elementParameter field="TEXT" name="CC" value=""/>
-    <elementParameter field="TEXT" name="BCC" value="&quot;matti@incontext.se&quot;"/>
-    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Updated Employment Status - &quot;+row5.CandidateName+ &quot; (&quot; +row5.ManagerName+&quot;)&quot;"/>
-    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;&lt;html&gt;&lt;body&gt;&lt;p&gt;Hi &quot;+row5.ManagerName+&quot;.&lt;br/&gt;&lt;br/&gt;&#13;&#10;Your employee has just changed his Employment Status from &lt;strong&gt;Probationary Period&lt;/strong&gt; to &lt;strong&gt;Until Further Notice&lt;/strong&gt;. &#13;&#10;&lt;br/&gt;&lt;br/&gt;1. Inform &lt;strong&gt;&quot;+row5.CandidateName+&quot;&lt;/strong&gt; about his/her new status on your next follow-up meeting.&#13;&#10;&lt;br/&gt;&lt;br/&gt;2. &lt;strong&gt;Update the Employment Status&lt;/strong&gt; in &lt;a href='https://incontext.lightning.force.com/lightning/r/Contact/'&quot;+row5.Id+&quot;/view' &gt;Salesforce&lt;/a&gt;.&#13;&#10;&lt;br/&gt;&lt;br/&gt;Thanks&#13;&#10;&lt;br/&gt;&lt;br/&gt;&#13;&#10;&#13;&#10;&#13;&#10;&lt;/p&gt;&#13;&#10;&lt;/body&gt;&#13;&#10;&lt;/html&gt;&#13;&#10;&quot;"/>
-    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="false"/>
-    <elementParameter field="TABLE" name="ATTACHMENTS"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TEXT" name="SMTP_HOST" value="context.EmailSMTP"/>
-    <elementParameter field="TEXT" name="SMTP_PORT" value="25"/>
-    <elementParameter field="CHECK" name="SSL" value="false"/>
-    <elementParameter field="CHECK" name="STARTTLS" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.EmailUserName"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kudXwE3hHhkqU607ejTq+4bl"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="html"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
-    <elementParameter field="TEXT" name="LOCALHOST" show="false" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSendMail_2">
-      <column comment="" key="false" length="-1" name="CandidateName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CandidateEmail" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ManagerName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ManagerEmail" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="DateDiff" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TO" value="row5.ManagerEmail"/>
     <elementParameter field="TEXT" name="FROM" value="&quot;matti@incontext.se&quot;"/>
@@ -1070,7 +1033,7 @@
     <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
     <elementParameter field="TEXT" name="LOCALHOST" show="false" value="&quot;localhost&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSendMail_1">
+    <metadata connector="FLOW" name="tSendMail_2">
       <column comment="" key="false" length="-1" name="CandidateName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CandidateEmail" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ManagerName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -2643,7 +2606,7 @@
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_3"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="&#9;globalMap.put(&quot;Mail&quot;,&quot;&quot;);&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append(&quot;&lt;table border=\&quot;1px\&quot;&gt;&lt;caption&gt;Work Anniversary---------------&lt;/caption&gt;&quot;);&#10;      sb.append(&quot;&lt;tr&gt;&lt;th&gt;Candidate Name&lt;/th&gt;&quot;);&#10;      sb.append(&quot;&lt;th&gt;Date(Weekday)&lt;/th&gt;&quot;);&#10;      sb.append(&quot;&lt;th&gt; Manager Name&lt;/th&gt;&quot;);&#10;&#9;  sb.append(&quot;&lt;/tr&gt;&quot;);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="&#9;boolean check=false;&#10;&#9;globalMap.put(&quot;Mail&quot;,&quot;&quot;);&#10;      StringBuffer sb=new StringBuffer();&#10;      sb.append(&quot;&lt;table border=\&quot;1px\&quot;&gt;&lt;caption&gt;Work Anniversary---------------&lt;/caption&gt;&quot;);&#10;      sb.append(&quot;&lt;tr&gt;&lt;th&gt;Candidate Name&lt;/th&gt;&quot;);&#10;      sb.append(&quot;&lt;th&gt;Date(Weekday)&lt;/th&gt;&quot;);&#10;      sb.append(&quot;&lt;th&gt; Manager Name&lt;/th&gt;&quot;);&#10;&#9;  sb.append(&quot;&lt;/tr&gt;&quot;);"/>
     <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#9;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#10;&#9;Date today=new Date();&#10;&#9;Calendar td = Calendar.getInstance();&#10;&#9;td.setTime(today);&#10;&#9;Calendar bd=Calendar.getInstance();&#10;&#9;bd.setTime(JoiningDate.First_day__c);&#10;&#9;//System.out.println(&quot;##########&quot;+td.getTime()+&quot;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&quot;+bd.getTime());&#10;&#9;int tdMonth;&#10;&#9;int bdMonth;&#10;&#9;int tdDay;&#10;&#9;int bdDay;&#10;&#9;for(int i=1;i&lt;=17;i++)&#10;&#9;{&#10;&#9;td.add(Calendar.DATE,1);&#10;&#9;//System.out.println(&quot;Iteration:====&quot;+td.getTime());&#10;&#9;tdMonth=td.get(Calendar.MONTH);&#10;&#9;bdMonth=bd.get(Calendar.MONTH);&#10;&#9;if(tdMonth==bdMonth)&#10;&#9;{&#10;&#9;tdDay=td.get(Calendar.DAY_OF_MONTH);&#10;&#9;bdDay=bd.get(Calendar.DAY_OF_MONTH);&#10;&#9;&#9;if(tdDay==bdDay)&#10;&#9;&#9;{&#10;&#9;&#9;check=true;&#10;&#9;&#9;sb.append(&quot;&lt;tr&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;td&gt;&quot;+JoiningDate.CandidateName+&quot;&lt;/td&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;td&gt;&quot;+sdf.format(td.getTime()));&#10;&#9;&#9;sb.append(&quot;(&quot;);&#10;&#9;&#9;Date temp=td.getTime();&#10;&#9;&#9;sdf = new SimpleDateFormat(&quot;EEEE&quot;);&#10;&#9;&#9;sb.append(sdf.format(temp));&#10;&#9;&#9;sb.append(&quot;)&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;/td&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;td&gt;&quot;+JoiningDate.ManagerName+&quot;&lt;/td&gt;&quot;);&#10;&#9;&#9;sb.append(&quot;&lt;/tr&gt;&quot;);&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;}"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="      sb.append(&quot;&lt;/table&gt;&quot;);&#10;      globalMap.put(&quot;Mail&quot;,sb.toString());&#10;      System.out.println(&quot;$$$$$$$$$$$$$\n&quot;+(String)globalMap.get(&quot;Mail&quot;));&#10;      if(check==true){&#10;      context.MailContent=context.MailContent+(String)globalMap.get(&quot;Mail&quot;);&#10;      }&#10;     else&#10;     context.MailContent=context.MailContent+&quot;&lt;br&gt;&lt;/br&gt;&lt;font color=\&quot;red\&quot;&gt;There are no Work Anniversaries in the coming week &lt;/font&gt;&quot;;"/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
@@ -2870,11 +2833,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
@@ -2917,13 +2875,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="233;222;10"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_24a9f994-d71a-491d-8fff-5624afa5c281"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UYKtqOeHYWN6ocPOxZihK0cc4F0pZ2DsER8NgXiydn2ZinTOQA+cxRGMxUFFTkuBI+FVFCPwR+hg
-/2e1l0H7DA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d2117542-0edf-40f7-bdb7-2a5e908b1c35"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mMPxOXNk10yUmti/qqJEtZSHJcYkID/iEpIknzrwVoX+dFlLWyH1zJTq6F6pkwPXp46p3sjHs4vw
-iCM8fX5Gbg==</DigestValue></Reference></SignedInfo><SignatureValue>QQ97vmJYnqGFbdMFZr2KYRA0X0DKtmK3+f8VxyhTv2stVNHnzFAylqkie8v9sh5eXUl/hXNrSRnS
-9Q93S7OkPD0LcvCA8ETnG4H7DSe/K853NRPbSUFF3WVRGReffPNT9BOSA3YTyTZI2QwSutWefyon
-gVsvfx9rjR1BS3xEHwpKWaukWiVGuaUTaYaPfE/4u1CyE5t/WIPN8Dubv+S3WXIKuCrXsqXxx8tK
-D4ta5dlDMcIb332pwED4xagJA3Hy42MIy8mnc889+4g5I4+foMW3sabk94D2vS4xhniVCIch8Xz0
-5D/Uf8nWcMwBCmkfNF3YnXzmpDEnI9b7uR54Jg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_623fed16-9764-472d-834d-c561895dee6d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>T3StRDT0WGsOkCuz2D9b84gDJRgYYOEn8JuihmPxlIHEwYkpaaG4y3Mk+bQ44wbEMVrE/ApA7Rjj
+3W7rCiwL6w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5e968154-85ad-43be-9d7e-95d35371516f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wsBJzO2DGvbqYT8Xv9epAwMHdVxiuTCihlzIUeHV7JqLvQgO+vUahwDCjfCSa3bNOVlwzmvvb3On
+ZohhzaWR1Q==</DigestValue></Reference></SignedInfo><SignatureValue>g+dIcC1HzQXz41lgdhH2jdaUcaPcdtTGoeUep8cd6mAz8kTKjP06wKW61e17wouvuo9IzFnIhbPz
+tDNEOE1mHGD4a4JCfGzA6N3wLffjuNjjVvHL8jZ5ktw7nRfnSVLNBstFRfw54nxnIr4GwaDQJ1Ns
+cC9ErCPuZGuNNV87RlhY9oB2hcZ11wSI7WukfKqF6WrI7wVLgQ88ck/tYotdVMlRuXovaH+YtgBq
+g/mca4bzn/i5kVB5hHhLGo0ErtNCN98yMw2ze/MdfVjMaXZFvFgO5pWmI7B0IJCLQsTuCMpCbc4B
+qGpCoArrIOohsD7gxjr/II6B+pk6CwfuwQAmHQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -2947,4 +2905,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d2117542-0edf-40f7-bdb7-2a5e908b1c35" Target="#_24a9f994-d71a-491d-8fff-5624afa5c281"><Timestamp>2018-12-14 12:39:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5e968154-85ad-43be-9d7e-95d35371516f" Target="#_623fed16-9764-472d-834d-c561895dee6d"><Timestamp>2018-12-14 12:42:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
